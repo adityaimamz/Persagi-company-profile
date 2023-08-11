@@ -52,6 +52,10 @@ body {
     font-weight: 501 !important;
 }
 
+.long {
+    width: 100%;    
+}
+
 *{
     font-family: 'Noto Sans', sans-serif;
 }
@@ -59,9 +63,34 @@ body {
     background-color: #005BAB;
     color: #fff;
 }
+
 .text-main{
     color: #005BAB !important;
 }
+
+.border-main{
+    border-color: #005BAB !important;
+}
+
+
+.title-jumbotron {
+    font-size: 48px; 
+    font-weight: 700; 
+    color: #0C385F;
+}
+
+.text-title {
+    color: #2E367E !important;
+}
+
+.text-secondary-emphasis {
+    color: #636363 !important;
+}
+
+.button-event {
+    margin: 0 -25rem;
+}
+
 .btn-main{
     background-color: #fff;
     color: #005BAB;
@@ -188,4 +217,70 @@ body {
 
 .pb-7 {
     padding-bottom: 5rem!important;
+}
+
+@media screen and (max-width: 1400px) {
+    .button-event {
+        margin: 0 -20rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .button-event {
+        margin: 0 -14rem;
+    }
+    .title-jumbotron {
+        font-size:35px !important;
+    }
+    .text-jumbotron {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .button-event {
+        margin: 0 -6rem;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .button-event {
+        margin: 0 -0.5rem;
+    }
+    .btn-jumbotron {
+        width: 80%;
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-img {
+        max-width: 80%;
+    }
+
+    .nav-date {
+        font-size: 13px !important;
+    }
+
+    .button-event {
+        margin: 0 -0.3rem;
+    }
+    .btn-jumbotron {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .btn-web{
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: semi bold;
+        background-color: #003A6E;
+        border-radius: 5px;
+        height: 55px;
+        width: 180px;
+    }
+
+    .card-jumbotron {
+        margin: 15px;
+    }
 }
