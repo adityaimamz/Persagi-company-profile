@@ -30,9 +30,9 @@
         <div class="container d-flex justify-content-between">
             <p class="my-auto fs-6 fw-500 nav-date">
                 {{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMMM YYYY, HH:mm [WIB]') }}</p>
-            <button class="btn btn-main px-3 fw-medium" type="button">
+            <a href="/login"><button  class="btn btn-main px-3 fw-medium" type="button">
                 Masuk
-            </button>
+            </button></a>
         </div>
     </div>
     <div class="nav-mid bg-white py-3">
@@ -79,8 +79,8 @@
                 Karawang.
                 Bersama-sama, kami mengajak Anda untuk meraih kesehatan optimal melalui informasi terkini
                 seputar gizi, serta layanan unggulan yang dirancang khusus untuk masyarakat Karawang.</h2>
-            <img src="Assets/png/hero.png" alt="" class="img-fluid d-block mx-auto my-5 img-jumbotron">
-            <button type="button" class="btn btn-lg button-lg d-block mx-auto btn-jumbotron">Layanan Utama
+            <img src="Assets/png/jumbotron.png" alt="" class="img-fluid d-block mx-auto my-4 img-jumbotron">
+            <button type="button" class="btn btn-lg button-lg d-block mx-auto btn-jumbotron no-hover">Layanan Utama
                 Persagi</button>
         </div>
         <div class="d-flex flex-wrap justify-content-center gap-5 bg-center pb-7">

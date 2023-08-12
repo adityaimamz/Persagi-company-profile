@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    height: 100vh;
+
+}
+
+.text-main{
+    color: #005BAB !important;
+    font-size: 28px;
+    font-weight:500;
+}
+
+.card-form {
+    width: 600px;
+    border-radius: 20px;
+}
+
+.form-check {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+}
+
+body {
+    background-color: #E1F3FF;
+    background-image: url(../png/bg-petaindo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#togglePassword {
+    background-color: transparent;
+    border: 1px solid#DEE2E6;
+    border-left: none;
+  }
+
+#togglePassword:hover {
+    color: black;
+}
+
+.no-decoration {
+    text-decoration: none !important;
+}
+
+.long {
+    width: 100%;
+}
+
+.back {
+    font-size: 30px;
+    color: #005BAB !important;
+    margin-right: 20px;
+}
+
+.back2 {
+    font-size: 30px;
+    color: #005BAB !important;
+    display: block;
+}
+
+.fs-9 {
+    font-size: 13px;
+}
+
+.bg-main {
+    background-color: #005BAB;
+    color: #fff;
+}
+
+@media screen and (max-width: 420px) {
+    .card-form {
+        width: 350px !important;
+        margin: auto;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-form {
+        width: 390px;
+        margin: auto;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .back {
+        display: none;
+    }
+    .back2 {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .back {
+        font-size: 30px;
+        color: #005BAB !important;
+        margin-right: -50px;
+    }
+}
