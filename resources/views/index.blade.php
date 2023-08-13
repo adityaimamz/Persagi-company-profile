@@ -124,44 +124,17 @@
             <!-- Caraousel -->
             <div class="swiper mySwiper py-5 ">
                 <div class="swiper-wrapper">
+                    @foreach ($artikels as $item)
                     <div class="card swiper-slide" style="width: 18rem;">
-                        <img src="Assets/png/artikel-1 1.png" class="card-img-top" alt="...">
+                        <img src="http://localhost:8001/storage/{{$item->gambar}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title text-start text-title">Menghormati Masa Lalu, Merangkul Masa Depan:
-                                Pelantikan Pengurus Persagi Periode 2021-2025</h5>
-                            <p class="text-start text-secondary-emphasis">21 Februari 2021</p>
+                            <h5 class="card-title text-start text-title">{{$item->judul}}</h5>
+                            <p class="text-start text-secondary-emphasis">{{ \Carbon\Carbon::parse($item->created_at)->locale('id')->diffForHumans()}}</p>
                             <a href="#" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
                         </div>
                     </div>
-                    <div class="card swiper-slide" style="width: 18rem;">
-                        <img src="Assets/png/artikel-1 1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-start text-title">Menghormati Masa Lalu, Merangkul Masa Depan:
-                                Pelantikan Pengurus Persagi Periode 2021-2025</h5>
-                            <p class="text-start text-secondary-emphasis">21 Februari 2021</p>
-                            <a href="#" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide" style="width: 18rem;">
-                        <img src="Assets/png/artikel-1 1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-start text-title">Menghormati Masa Lalu, Merangkul Masa Depan:
-                                Pelantikan Pengurus Persagi Periode 2021-2025</h5>
-                            <p class="text-start text-secondary-emphasis">21 Februari 2021</p>
-                            <a href="#" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide" style="width: 18rem;">
-                        <img src="Assets/png/artikel-1 1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-start text-title">Menghormati Masa Lalu, Merangkul Masa Depan:
-                                Pelantikan Pengurus Persagi Periode 2021-2025</h5>
-                            <p class="text-start text-secondary-emphasis">21 Februari 2021</p>
-                            <a href="#" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-
                 <div class="swiper-pagination"></div>
             </div>
             <div>
@@ -384,6 +357,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <!-- Initialize Swiper -->
+    
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
