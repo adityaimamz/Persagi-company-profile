@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap');
 
+
 html,
 body {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
 
 a {
@@ -12,45 +13,49 @@ a {
 }
 
 body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: transparent !important;
 }
 
 .swiper {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .swiper-slide {
-  width: 80%;
+    width: 80%;
 }
 
 .swiper-slide:nth-child(2n) {
-  width: 60%;
+    width: 60%;
 }
 
 .swiper-slide:nth-child(3n) {
-  width: 40%;
+    width: 40%;
 }
 
 .fw-medium {
@@ -58,33 +63,32 @@ body {
 }
 
 .long {
-    width: 100%;    
+    width: 100%;
 }
 
-.no-hover {
-    
-}
+.no-hover {}
 
-*{
+* {
     font-family: 'Noto Sans', sans-serif;
 }
-.bg-main{
+
+.bg-main {
     background-color: #005BAB;
     color: #fff;
 }
 
-.text-main{
+.text-main {
     color: #005BAB !important;
 }
 
-.border-main{
+.border-main {
     border-color: #005BAB !important;
 }
 
 
 .title-jumbotron {
-    font-size: 48px; 
-    font-weight: 700; 
+    font-size: 48px;
+    font-weight: 700;
     color: #0C385F;
 }
 
@@ -100,30 +104,35 @@ body {
     margin: 0 -25rem;
 }
 
-.btn-main{
+.btn-main {
     background-color: #fff;
     color: #005BAB;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 500;
 }
-.nav-mid{
+
+.nav-mid {
     background-image: url(../Assets/png/bg-navbar.png);
 }
-.fw-300{
+
+.fw-300 {
     font-weight: 300;
 }
-.h1-large{
+
+.h1-large {
     font-size: 48px;
     font-weight: 700px;
     color: #0C385F;
 }
-.h2-small{
+
+.h2-small {
     font-size: 20px;
     font-weight: 400px;
     color: #454545;
 }
-.button-lg{
+
+.button-lg {
     font-size: 34px;
     font-weight: 700px;
     color: #fff;
@@ -134,43 +143,98 @@ body {
     width: 573px;
     border-radius: 20px;
 }
-.button-lg:hover{
+
+.button-lg:hover {
     background-color: #005BAB;
     color: #fff;
     opacity: 0.8;
 }
 
-
-.jumbotron{
-    background-image: url(../Assets/png/Group\ 14.png);
-    
+body {
+    margin: 0;
+    padding: 0;
 }
-.bg-center{
+
+.hidden {
+    display: none !important;
+}
+
+.to-top-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #005BAB;
+    padding-top: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.arrow {
+    transition: transform 0.3s;
+}
+
+.arrow:hover {
+    transform: translateY(-0.5rem);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+.jumbotron {
+    background-image: url(../Assets/png/Group\ 14.png);
+
+}
+
+.bg-center {
     background-color: #E1F3FF;
     color: #fff;
 
 
 }
-.bg button{
+
+.bg button {
     background-color: #E1F3FF;
 }
-.card{
+
+.card {
     border-radius: 20px;
 }
 
-.Artikel{
+.Artikel {
     font-size: 40px;
     font-weight: bold;
     color: #2E367E;
 }
 
-.btn-outline-art{
+.btn-outline-art {
     font-size: 20px;
     font-weight: 700px;
     color: #005BAB;
     box-shadow: 0px 0px 2px 2px rgba(12, 56, 95, 0.25);
 }
-.btn-web{
+
+.btn-web {
     font-size: 24px;
     font-weight: semi bold;
     background-color: #003A6E;
@@ -181,10 +245,10 @@ body {
 
 .card-jumbotron {
     width: 350px !important;
-    height: 240px !important; 
+    height: 240px !important;
 }
 
-.btn-l{
+.btn-l {
     font-size: 24px;
     font-weight: semi bold;
     background-color: #fff;
@@ -193,41 +257,46 @@ body {
     height: 55px;
     width: 180px;
 }
+
 .card-img-left {
     float: left;
-    margin-right: 10px; 
-    max-width: 300px; 
-  
-    
-  }
-.txt-evnt{
-    font-size: 10px;
-}
-.card-evnt{
-    height: 300px;
-    width: 700px;
-} 
-.bg-event{
-    background-color: #898181;
-    
+    margin-right: 10px;
+    max-width: 300px;
+
+
 }
 
-.txt-f{
+.txt-evnt {
+    font-size: 10px;
+}
+
+.card-evnt {
+    height: 300px;
+    width: 700px;
+}
+
+.bg-event {
+    background-color: #898181;
+
+}
+
+.txt-f {
     font-size: 20px;
     font-weight: bold;
     color: #005BAB;
 }
-.txt-nav{
+
+.txt-nav {
     font-size: 20px;
 }
 
-.txt-foot{
+.txt-foot {
     font-size: 16px;
     font-weight: 400;
 }
 
 .pb-7 {
-    padding-bottom: 5rem!important;
+    padding-bottom: 5rem !important;
 }
 
 @media screen and (max-width: 1400px) {
@@ -240,9 +309,11 @@ body {
     .button-event {
         margin: 0 -14rem;
     }
+
     .title-jumbotron {
-        font-size:35px !important;
+        font-size: 35px !important;
     }
+
     .text-jumbotron {
         font-size: 18px !important;
     }
@@ -254,10 +325,19 @@ body {
     }
 }
 
+
+@media screen and (max-width: 1000px) {
+    .navbar-nav {
+        margin-top: 1rem !important;
+    }
+}
+
+
 @media screen and (max-width: 765px) {
     .button-event {
         margin: 0 -0.5rem;
     }
+
     .btn-jumbotron {
         width: 80%;
         font-size: 23px;
@@ -276,12 +356,13 @@ body {
     .button-event {
         margin: 0 -0.3rem;
     }
+
     .btn-jumbotron {
         width: 80%;
         font-size: 18px;
     }
 
-    .btn-web{
+    .btn-web {
         font-size: 24px;
         margin-bottom: 15px;
         font-weight: semi bold;

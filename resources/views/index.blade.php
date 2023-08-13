@@ -30,45 +30,46 @@
         <div class="container d-flex justify-content-between">
             <p class="my-auto fs-6 fw-500 nav-date">
                 {{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMMM YYYY, HH:mm [WIB]') }}</p>
-            <a href="/login"><button  class="btn btn-main px-3 fw-medium" type="button">
-                Masuk
-            </button></a>
+            <a href="/login"><button class="btn btn-main px-3 fw-medium" type="button">
+                    Masuk
+                </button></a>
         </div>
     </div>
     <div class="nav-mid bg-white py-3">
         <img src="Assets/png/logo-persagi.png" alt="" class="img-fluid d-block mx-auto nav-img">
         <p class="text-center text-main na-title">“ Dorong kesejahteraan gizi, dengan dukungan PERSAGI ”</p>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-main sticky-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse txt-nav " id="navbarNavAltMarkup">
-                <ul class="navbar-nav mx-auto gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Layanan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Artikel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Event</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
-                    </li>
-                </ul>
-            </div>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-main sticky-top">
+    <div class="container-fluid">
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse txt-nav" id="navbarNavAltMarkup">
+            <ul class="navbar-nav mx-auto gap-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Layanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Artikel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Event</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontak</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
     <div class="jumbotron bg-center">
         <div class="container pt-5">
             <h1 class="text-center title-jumbotron">
@@ -361,7 +362,9 @@
                 </div>
             </div>
         </div>
-
+        <button id="toTopButton" class="hidden to-top-button">
+            <span class="arrow">▲</span>
+        </button>
 
     </footer>
 
@@ -421,6 +424,25 @@
             autoplay: {
                 delay: 3000, // Ubah nilai ini sesuai keinginan (dalam milidetik)
             },
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const toTopButton = document.getElementById("toTopButton");
+
+            window.addEventListener("scroll", function() {
+                if (window.pageYOffset > 100) {
+                    toTopButton.classList.remove("hidden");
+                } else {
+                    toTopButton.classList.add("hidden");
+                }
+            });
+
+            toTopButton.addEventListener("click", function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
         });
     </script>
 
