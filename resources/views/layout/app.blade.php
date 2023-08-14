@@ -33,9 +33,32 @@
         <div class="container d-flex justify-content-between">
             <p class="my-auto fs-6 fw-500 nav-date">
                 {{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMMM YYYY, HH:mm [WIB]') }}</p>
-            <a href="/login"><button class="btn btn-main px-3 fw-medium" type="button">
-                    Masuk
-                </button></a>
+                @if (Auth::user())
+                    <a href="" data-bs-toggle="dropdown" class="text-white">
+                        <img src="{{ asset('Assets/png/defaultpp.jpeg') }}" alt="" width="20px" class="rounded-circle"><span class="mx-3">{{ Auth::user()->username }}</span><img src="{{ asset('assets/png/arrow.png') }}" alt="">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>{{ Auth::user()->name }}</h6>
+                            <span>{{ Auth::user()->username }}</span>
+                        </li>
+                        <li> 
+                            <hr class="dropdown-divider" />
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item d-flex align-items-center"
+                                href="{{ route('logout') }}"
+                            >
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                @else
+                <a href="/login"><button class="btn btn-main px-3 fw-medium" type="button">Masuk</button></a>
+                @endif
         </div>
     </div>
     <div class="nav-mid bg-white py-3">

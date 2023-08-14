@@ -29,4 +29,12 @@ class LoginController extends Controller
 
         return redirect()->back()->with('login', 'Email atau password salah.');
     }
+
+    public function logout() {
+        Session::flush();
+        
+        Auth::logout();
+
+        return redirect('login');
+    }
 }
