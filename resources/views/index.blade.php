@@ -88,23 +88,22 @@
             </div>
             <div class="swiper mySwiper2 py-5 ">
                 <div class="swiper-wrapper">
+                    @foreach ($events as $event)
                     <div class="card swiper-slide d-flex gap-3 card-lg">
                         <div class="row">
                             <div class="col-4">
-                                <img src="Assets/png/Snapinsta 1.png" class="" alt="...">
+                                <img src="http://localhost:8000/storage/{{ $event->gambar }}" class="" alt="...">
                             </div>
                             <div class="col">
                                 <div class="pt-3 ">
-                                    <h5 class="text-start text-title">Menghormati Masa Lalu, Merangkul Masa Depan:
-                                        Pelantikan
-                                        Pengurus Persagi Periode 2021-2025</h5>
+                                    <h5 class="text-start text-title">{{ $event->judul }}</h5>
                                     <div class="d-flex gap-2">
                                         <p><img src="Assets/png/clarity_date-solid.png" width="18px" alt=""></p>
-                                        <p class="txt-foot">Sabtu, 17 April 2021</p>
+                                        <p class="txt-foot">{{ $event->tanggal }}</p>
                                     </div>
                                     <div class="d-flex gap-2">
                                         <p><img src="Assets/png/Vector.png" width="18px" alt=""></p>
-                                        <p class="txt-foot"> 08.00 WIB - Selesai
+                                        <p class="txt-foot"> {{ $event->jam }}
                                         </p>
                                     </div>
                                     <div class="d-flex gap-1">
@@ -119,69 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card swiper-slide d-flex gap-3 card-lg">
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="Assets/png/Snapinsta 1.png" class="" alt="...">
-                            </div>
-                            <div class="col">
-                                <div class="pt-3">
-                                    <h5 class="text-start text-title">Menghormati Masa Lalu, Merangkul Masa Depan:
-                                        Pelantikan
-                                        Pengurus Persagi Periode 2021-2025</h5>
-                                    <div class="d-flex gap-2">
-                                        <p><img src="Assets/png/clarity_date-solid.png" width="18px" alt=""></p>
-                                        <p class="txt-foot">Sabtu, 17 April 2021</p>
-                                    </div>
-                                    <div class="d-flex gap-2">
-                                        <p><img src="Assets/png/Vector.png" width="18px" alt=""></p>
-                                        <p class="txt-foot"> 08.00 WIB - Selesai
-                                        </p>
-                                    </div>
-                                    <div class="d-flex gap-1">
-                                        <p><img src="Assets/png/fluent_location-16-filled.png" width="18px"
-                                                alt=""></p>
-                                        <p class="txt-foot"> Online (Zoom Meeting)
-                                        </p>
-                                    </div>
-                                    <a href="#" class="btn btn-light text-main border-main mb-3">Baca
-                                        Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide d-flex gap-3 card-lg">
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="Assets/png/Snapinsta 1.png" class="" alt="...">
-                            </div>
-                            <div class="col">
-                                <div class="pt-3">
-                                    <h5 class="text-start text-title">Menghormati Masa Lalu, Merangkul Masa Depan:
-                                        Pelantikan
-                                        Pengurus Persagi Periode 2021-2025</h5>
-                                    <div class="d-flex gap-2">
-                                        <p><img src="Assets/png/clarity_date-solid.png" width="18px" alt="">
-                                        </p>
-                                        <p class="txt-foot">Sabtu, 17 April 2021</p>
-                                    </div>
-                                    <div class="d-flex gap-2">
-                                        <p><img src="Assets/png/Vector.png" width="18px" alt=""></p>
-                                        <p class="txt-foot"> 08.00 WIB - Selesai
-                                        </p>
-                                    </div>
-                                    <div class="d-flex gap-1">
-                                        <p><img src="Assets/png/fluent_location-16-filled.png" width="18px"
-                                                alt=""></p>
-                                        <p class="txt-foot"> Online (Zoom Meeting)
-                                        </p>
-                                    </div>
-                                    <a href="#" class="btn btn-light text-main border-main mb-3">Baca
-                                        Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div>
                     <button class="btn btn-outline-art d-flex mx-auto mt-5">

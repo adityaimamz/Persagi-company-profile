@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
 use App\Models\Article;
-
+use App\Models\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +19,13 @@ use App\Models\Article;
 
 Route::get('/', function () {
     $artikels=Article::all();
-    return view('index', compact('artikels'));
+    $events=Event::all();
+    return view('index', compact('artikels','events'));
 });
 
 route::get('/login', [LoginController::class, 'index'])->name('login');
 route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+Route::get('/profile', function() {
+    return view('profile');
+}); 

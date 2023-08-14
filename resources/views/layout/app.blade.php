@@ -36,7 +36,6 @@
             <a href="/login"><button class="btn btn-main px-3 fw-medium" type="button">
                     Masuk
                 </button></a>
-                
         </div>
     </div>
     <div class="nav-mid bg-white py-3">
@@ -53,10 +52,10 @@
             <div class="collapse navbar-collapse txt-nav" id="navbarNavAltMarkup">
                 <ul class="navbar-nav mx-auto gap-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                        <a class="nav-link active" aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Layanan</a>
@@ -139,7 +138,7 @@
                     <div class="col">
                         <img src="Assets/png/Line 5.png" alt="" width="100%" class="mb-3">
                         <p class="text-center">DPC Persagi Karawang, All right reserved</p>
-                        <p class="text-center">Designed and Developed by </p>
+                        <p class="text-center">Designed and Developed by Students of Institute Technology Telkom Purwokerto</p>
                     </div>
                 </div>
             </div>
