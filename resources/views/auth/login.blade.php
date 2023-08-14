@@ -35,17 +35,24 @@
                     <div class="card login-form card-form">
                         <div class="card-body">
                             <h1 class="card-title d-blok text-center text-main">Masuk</h1>
+                            @if (Session::has('login'))
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                {{ Session::get('login') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            @endif
                             <div class="card-text">
-                                <form>
+                                <form action="{{ route('login.store') }}" method="POST">
+                                    @csrf
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Alamat Email</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp">
+                                            aria-describedby="emailHelp" name="email" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Kata Sandi</label>
                                         <div class="input-group">
-                                            <input type="password" class="form-control" id="password">
+                                            <input type="password" class="form-control" id="password" name="password" required>
                                             <button type="button" id="togglePassword"
                                                 class="btn btn-outline-secondary"><i class="bi-eye"></i></button>
                                         </div>

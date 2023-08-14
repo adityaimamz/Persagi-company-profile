@@ -33,31 +33,48 @@
                     <div class="card login-form card-form">
                         <div class="card-body">
                             <h1 class="card-title d-blok text-center text-main">Register</h1>
+                            @if (Session::has('register'))
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                {{ Session::get('register') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            @endif
                             <div class="card-text">
-                                <form>
+                                <form action="{{ route('register.store') }}" method="POST">
+                                    @csrf
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Name</label>
+                                        <input type="username" class="form-control" id="username"
+                                            aria-describedby="username" name="name" required>
+                                        <div class="errors text-danger" style="font-size: 14px">{{ $errors->register->first('name') }}</div>
+                                    </div>
                                     <div class="mb-3">
                                         <label for="username" class="form-label">Username</label>
                                         <input type="username" class="form-control" id="username"
-                                            aria-describedby="username">
+                                            aria-describedby="username" name="username" required>
+                                            <div class="errors text-danger" style="font-size: 14px">{{ $errors->register->first('username') }}</div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email">
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <div class="errors text-danger" style="font-size: 14px">{{ $errors->register->first('email') }}</div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Kata Sandi</label>
                                         <div class="input-group">
-                                            <input type="password" class="form-control" id="password">
+                                            <input type="password" class="form-control" id="password" name="password" required>
                                             <button type="button" id="togglePassword"
-                                                class="btn btn-outline-secondary"><i class="bi-eye"></i></button>
+                                            class="btn btn-outline-secondary"><i class="bi-eye"></i></button>
+                                            <div class="errors text-danger" style="font-size: 14px">{{ $errors->register->first('password') }}</div>
                                         </div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="exampleInputPassword1" class="form-label">Konfirmasi Kata
                                             Sandi</label>
-                                        <input type="re-password" class="form-control" id="re-password">
+                                        <input type="re-password" class="form-control" id="re-password" name="retype_password" required>
+                                        <div class="errors text-danger" style="font-size: 14px">{{ $errors->register->first('retype_password') }}</div>
                                     </div>
 
                                     <div class="mb-3 form-check">
@@ -69,6 +86,8 @@
                                             <label><a href="#">Lupa Kata Sandi?</a></label>
                                         </div>
                                     </div>
+                                    <input type="hidden" name="role_id" value="3">
+                                    <input type="hidden" name="is_active" value="1">
                                     <button type="submit" class="btn btn-primary bg-main long">Daftar</button>
                                     <a href="/login" class="text-center no-decoration">
                                         <p class="pt-4 fs-9">
