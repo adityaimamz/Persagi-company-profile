@@ -66,7 +66,7 @@
                                             <label><a href="#" class="no-decoration">Lupa Kata Sandi?</a></label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary bg-main long">Daftar</button>
+                                    <button type="submit" class="btn btn-primary bg-main long">Login</button>
                                     <a href="/register" class="text-center no-decoration">
                                         <p class="pt-4 fs-9">
                                             Belum memiliki akun? Daftar

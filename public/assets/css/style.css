@@ -111,6 +111,15 @@ body {
     font-weight: 500;
 }
 
+.btn-main:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .nav-mid {
     background-image: url(../Assets/png/bg-navbar.png);
 }

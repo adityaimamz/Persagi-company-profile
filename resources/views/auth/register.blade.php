@@ -66,8 +66,8 @@
                                             <input type="password" class="form-control" id="password" name="password" required>
                                             <button type="button" id="togglePassword"
                                             class="btn btn-outline-secondary"><i class="bi-eye"></i></button>
-                                            <div class="errors text-danger" style="font-size: 14px">{{ $errors->register->first('password') }}</div>
                                         </div>
+                                        <div class="errors text-danger" style="font-size: 14px">{{ $errors->register->first('password') }}</div>
                                     </div>
 
                                     <div class="mb-3">
