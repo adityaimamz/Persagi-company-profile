@@ -88,22 +88,6 @@
         </div>
     </div>
 
-    <script>
-        const togglePasswordButton = document.querySelector('#togglePassword');
-        const passwordInput = document.querySelector('#password');
-
-        togglePassword.addEventListener('click', () => {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            const iconElement = togglePasswordButton.querySelector('i');
-            if (type === 'password') {
-                iconElement.classList.remove('bi-eye');
-                iconElement.classList.add('bi-eye-slash');
-            } else {
-                iconElement.classList.remove('bi-eye-slash');
-                iconElement.classList.add('bi-eye');
-            }
-        })
     </script>
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
@@ -116,7 +100,7 @@
     <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 </body>
 
-<script src="{{ asset('assets/js/app.js') }}"></script>
+<script src="{{ asset('assets/js/login.js') }}"></script>
 @yield('js')
 
 </html>
