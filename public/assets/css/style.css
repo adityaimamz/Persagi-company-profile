@@ -94,6 +94,16 @@ body {
     width: 100%;
 }
 
+.container-maps {
+    width: 900px;
+    height: 580px;
+}
+
+.maps {
+    width: 100%;
+    height: 100%;
+}
+
 .btn-primary:hover {
     background-color: #fff;
     color: #005BAB;
@@ -310,6 +320,8 @@ body {
     width: 18px;
     height: 18px;
 }
+
+
 .btn-web {
     font-size: 24px;
     font-weight: semi bold;
@@ -436,6 +448,13 @@ body {
     .btn-jumbotron {
         width: 80%;
         font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container-maps {
+        width: 450px !important;
+        height: 580px !important;
     }
 }
 

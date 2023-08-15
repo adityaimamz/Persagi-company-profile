@@ -20,30 +20,33 @@
                     <div class="col-md-6">
                         <h1 class="fw-bold pt-5">Kontak Kami</h1>
                         <h3 class="text-main fw-semibold text-kontak">DPC PERSAGI KARAWANG</h3>
-                        <p class="text-kontak"">Anda perlu bantuan? Berikut ini alamat yang bisa anda kunjungi serta kontak yang bisa anda
+                        <p class="text-kontak"">Anda perlu bantuan? Berikut ini alamat yang bisa anda kunjungi serta kontak
+                            yang bisa anda
                             hubungi</p>
                         <div class="pt-2">
                             <h5 class="text-main">Alamat</h5>
-                                <div class="d-flex gap-2">
-                                    <img src="Assets/png/fluent_location-16-filled.png" class="icon" alt="">
-                                    <p class="text-kontak">Jalan Parahiyangan No.39, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311</p>
-                                </div>
+                            <div class="d-flex gap-2">
+                                <img src="Assets/png/fluent_location-16-filled.png" class="icon" alt="">
+                                <p class="text-kontak">Jalan Parahiyangan No.39, Adiarsa Bar., Kec. Karawang Bar., Karawang,
+                                    Jawa Barat 41311</p>
+                            </div>
                             <h5 class="text-main">Email</h5>
-                                <div class="d-flex gap-2">
-                                    <img src="Assets/png/ic_round-email.png" class="icon" alt="">
-                                    <p class="text-kontak">dpcpersagi3215@gmail.com</p>
-                                </div>
+                            <div class="d-flex gap-2">
+                                <img src="Assets/png/ic_round-email.png" class="icon" alt="">
+                                <p class="text-kontak">dpcpersagi3215@gmail.com</p>
+                            </div>
                             <h5 class="text-main">Telepon</h5>
-                                <div class="d-flex gap-2">
-                                    <img src="Assets/png/material-symbols_call2.png" class="icon" alt="">
-                                    <p class="text-kontak">+62852 2620 3601</p>
-                                </div>
+                            <div class="d-flex gap-2">
+                                <img src="Assets/png/material-symbols_call2.png" class="icon" alt="">
+                                <p class="text-kontak">+62852 2620 3601</p>
+                            </div>
                             <h5 class="text-main">Ikuti Kami</h5>
-                                <div class="d-flex gap-2">
-                                    <a href=""><img src="Assets/png/mdi_instagram.png" class="icon" alt=""></a>
-                                    <p class="pe-4">Facebook</p>
-                                    <a href=""><img src="Assets/png/mdi_fb.png" class="icon" alt=""></a>                                    <p class="text-kontak">Instagram</p>
-                                </div>
+                            <div class="d-flex gap-2">
+                                <a href=""><img src="Assets/png/mdi_instagram.png" class="icon" alt=""></a>
+                                <p class="pe-4">Facebook</p>
+                                <a href=""><img src="Assets/png/mdi_fb.png" class="icon" alt=""></a>
+                                <p class="text-kontak">Instagram</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -85,13 +88,23 @@
                             <div class="row mb-3">
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-9">
-                                    <button id="btnSubmit" type="submit" class="btn btn-danger btn-primary">Kirim</button>
+                                    <button id="btnSubmit" type="submit"
+                                        class="btn btn-danger btn-primary">Kirim</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="maps">
+        <div class="container container-maps py-5 px-2">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5878516681496!2d107.30447377411514!3d-6.317743861821297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6977cebb9afa29%3A0x67e83add75c68c4a!2sJl.%20Parahiyangan%20No.39%2C%20Adiarsa%20Bar.%2C%20Kec.%20Karawang%20Bar.%2C%20Karawang%2C%20Jawa%20Barat%2041311!5e0!3m2!1sen!2sid!4v1691586432090!5m2!1sen!2sid"
+                width="100%" height="100%" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="maps"></iframe>
         </div>
     </section>
 @endsection
