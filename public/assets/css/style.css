@@ -13,7 +13,7 @@ a {
 }
 
 body {
-    background: #eee;
+    background: #fff;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
@@ -71,9 +71,34 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.bg-secondary {
+    background-color: #E1F3FF !important;
+}
+
+.visi-misi {
+    height: 825px;
+}
+
+
+.btn-primary {
+    background-color: #005BAB;
+    color: #fff;
+    border-color: transparent;
+    width: 100%;
+}
+
 .bg-main {
     background-color: #005BAB;
     color: #fff;
+    font-size: small;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #005BAB;
+    width: 100%;
+    border-color: #005BAB;
 }
 
 .text-main {
@@ -206,14 +231,57 @@ body {
 
 .jumbotron {
     background-image: url(../Assets/png/Group\ 14.png);
+}
 
+.jumbotron-profile {
+    background-image: url(../png/jumbotron-profile.png);
+    height: 435px;
+}
+
+.title-jumbotron-profile {
+    padding-top: 5rem;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.text-jumbotron-profile {
+    font-size: 20px !important;
+    max-width: 640px;
+    font-weight: 300;
+    margin: 0 auto
 }
 
 .bg-center {
     background-color: #E1F3FF;
     color: #fff;
+}
+
+.text-kontak {
+    padding-right: 80px;
+    text-align: justify;
+}
+
+.img-profile {
+    /* margin-top: 10rem; */
+    margin-right: 5rem;
+}
 
 
+.text-justify {
+    text-align: justify;
+}
+
+.text-visi {
+    font-size: 20px;
+}
+
+.fs-9 {
+    font-size: 20px;
+}
+
+.container-profile {
+    height: 734px;
+    background-color: #fff;
 }
 
 .bg button {
@@ -237,6 +305,11 @@ body {
     box-shadow: 0px 0px 2px 2px rgba(12, 56, 95, 0.25);
 }
 
+.icon {
+    margin-top: 5px;
+    width: 18px;
+    height: 18px;
+}
 .btn-web {
     font-size: 24px;
     font-weight: semi bold;
@@ -326,6 +399,25 @@ body {
     .button-event {
         margin: 0 -6rem;
     }
+
+    .title-jumbotron-profile {
+        padding-top: 5rem;
+        font-size: 40px;
+        font-weight: 1000;
+    }
+
+    .title-jumbotron-profile {
+        font-size: 35px;
+        font-weight: 1000;
+    }
+
+    .text-jumbotron-profile {
+        font-size: 15px !important;
+        max-width: 500px;
+        font-weight: 300;
+        margin: 0 auto;
+        padding: 20px 20px;
+    }
 }
 
 
@@ -377,5 +469,46 @@ body {
 
     .card-jumbotron {
         margin: 15px;
+    }
+
+    .title-profile- {
+        font-size: 30px;
+        font-weight: 1000;
+    }
+
+    #tentang-kami {
+        text-align: center;
+    }
+
+    .title-jumbotron-profile {
+        font-size: 35px;
+        font-weight: 1000;
+    }
+
+    .text-profile {
+        font-size: 15px !important;
+        max-width: 500px;
+        font-weight: 400;
+        margin: 0 auto;
+        padding: 15px 15px;
+    }
+
+    .img-profile {
+        max-width: 45%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .text-visi {
+        font-size: 15px;
+    }
+
+    .visi-misi {
+        height: 870px;
+    }
+
+    .img-struktur {
+        width: 100%;
     }
 }

@@ -32,3 +32,7 @@ route::post('/register', [RegisterController::class, 'store'])->name('register.s
 Route::get('/profile', function() {
     return view('profile');
 }); 
+
+Route::get('/kontak', function() {
+    return view('kontak');
+}); 
