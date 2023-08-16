@@ -531,3 +531,45 @@ body {
         width: 100%;
     }
 }
+
+
+.text-artikel{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+.card-lg{
+    width: 1167px;
+    height: 260px;
+}
+
+.btn-out{
+display: flex;
+width: 230px;
+height: 40px;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+background: var(--primary, #005BAB);
+color: #E1F3FF;
+font-size: 16px;
+font-weight: 400px;
+
+}
+
+.txt-foot-art{
+color: var(--grey, #8C8C8C);
+font-family: Noto Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.txt.mid-art{
+color: var(--grey-text, #2D2D2D);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
