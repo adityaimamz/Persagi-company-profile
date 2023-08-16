@@ -36,3 +36,13 @@ Route::get('/profile', function() {
 Route::get('/kontak', function() {
     return view('kontak');
 }); 
+
+Route::get('/artikel', function() {
+    $artikels=Article::paginate(3);
+    return view('artikel', compact('artikels'));
+}); 
+
+Route::get('/event', function() {
+    $events=Event::paginate(4);
+    return view('event', compact('events'));
+}); 

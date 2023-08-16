@@ -81,13 +81,13 @@
                         <a class="nav-link" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Layanan">Layanan</a>
+                        <a class="nav-link" href="/layanan">Layanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Artikel">Artikel</a>
+                        <a class="nav-link" href="/artikel">Artikel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Event">Event</a>
+                        <a class="nav-link" href="/event">Event</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/kontak">Kontak</a>
