@@ -541,6 +541,7 @@ body {
 .card-lg{
     width: 1167px;
     height: 260px;
+
 }
 
 .btn-out{
@@ -573,3 +574,24 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
+.text-head-art{
+color: var(--grey-text, #2D2D2D);
+text-align: justify;
+font-family: Noto Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.text-mid-art{
+color: var(--grey-text, #2D2D2D);
+font-family: Noto Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
