@@ -24,7 +24,7 @@
     <link rel="icon" href="Assets/png/logo-persagi.png" type="image/x-icon">
 
 
-    <title>Persagi</title>
+    <title>Persagi | {{ $title }}</title>
 </head>
 
 <body>
@@ -75,22 +75,22 @@
             <div class="collapse navbar-collapse txt-nav" id="navbarNavAltMarkup">
                 <ul class="navbar-nav mx-auto gap-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+                        <a class="nav-link {{ ($title === 'Beranda' ? 'active' : '') }}" aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/profile">Profile</a>
+                        <a class="nav-link {{ ($title === 'Profile' ? 'active' : '') }}" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/layanan">Layanan</a>
+                        <a class="nav-link {{ ($title === 'Layanan' ? 'active' : '') }}" href="/layanan">Layanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/artikel">Artikel</a>
+                        <a class="nav-link {{ ($title === 'Artikel' ? 'active' : '') }}" href="/artikel">Artikel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/event">Event</a>
+                        <a class="nav-link {{ ($title === 'Event' ? 'active' : '') }}" href="/event">Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/kontak">Kontak</a>
+                        <a class="nav-link {{ ($title === 'Kontak' ? 'active' : '') }}" href="/kontak">Kontak</a>
                     </li>
                 </ul>
             </div>

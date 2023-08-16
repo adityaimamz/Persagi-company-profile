@@ -1,7 +1,7 @@
 @extends('layout/app')
 @section('content')
-    <section id="jumbotron-profile">
-        <div class="jumbotron-profile bg-center">
+    <section id="jumbotron-artikel">
+        <div class="jumbotron-event bg-center">
             <h1 class="text-center title-jumbotron-profile">ARTIKEL</h1>
             <h1 class="text-center fw-bold pt-2 subtitle-jumbotron-profile">DPC PERSAGI KARAWANG</h1>
             <p class="text-center pt-2 text-jumbotron-profile">Dapatkan informasi berbagai artikel dari Persagi</p>

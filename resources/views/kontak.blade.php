@@ -1,7 +1,7 @@
 @extends('layout/app')
 @section('content')
-    <section id="jumbotron-profile">
-        <div class="jumbotron-profile bg-center">
+    <section id="jumbotron-kontak">
+        <div class="jumbotron-kontak bg-center">
             <h1 class="text-center title-jumbotron-profile">INFORMASI KONTAK </h1>
             <h1 class="text-center fw-bold pt-2 subtitle-jumbotron-profile">DPC PERSAGI KARAWANG</h1>
             <p class="text-center pt-2 text-jumbotron-profile">Kenali DPC Persagi Karawang lebih detail, cari tahu apa saja
@@ -52,7 +52,15 @@
                     <div class="col-md-6">
                         <h2 class="pt-5">Tidak Menemukan Informasi Yang Anda Cari?</h2>
                         <p class="pt-3">Lengkapi form berikut ini untuk mendapatkan bantuan dari kami!</p>
-                        <form action="" name="kontak-kami" class="col mb-3 pt-3">
+                        @if (Session::has('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ Session::get('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            
+                        @endif
+                        <form action="{{ route('kontak.store') }}" method="POST" name="kontak-kami" class="col mb-3 pt-3">
+                            @csrf
                             <div class="row mb-3">
                                 <label for="nama" class="col-sm-3 col-form-label"
                                     style="font-weight: bold; font-size: small">Nama *</label>

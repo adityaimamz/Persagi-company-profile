@@ -264,6 +264,27 @@ body {
 .jumbotron-profile {
     background-image: url(../png/jumbotron-profile.png);
     height: 435px;
+    background-size: cover;
+
+}
+
+.jumbotron-event {
+    background-image: url(../png/hero-event.png);
+    height: 435px;
+    background-size: cover;
+
+}
+
+.jumbotron-kontak {
+    background-image: url(../png/hero-kontak.png);
+    height: 435px;
+    background-size: cover;
+
+}
+.jumbotron-layanan {
+    background-image: url(../png/hero-layanan.png);
+    height: 435px;
+    background-size: cover;
 }
 
 .title-jumbotron-profile {
