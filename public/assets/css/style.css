@@ -138,6 +138,7 @@ body {
 }
 
 
+
 .title-jumbotron {
     font-size: 48px;
     font-weight: 700;
@@ -174,7 +175,7 @@ body {
 }
 
 .nav-mid {
-    background-image: url(../Assets/png/bg-navbar.png);
+    background-image: url(../png/bg-navbar.png);
 }
 
 .fw-300 {
@@ -258,7 +259,8 @@ body {
 
 
 .jumbotron {
-    background-image: url(../Assets/png/Group\ 14.png);
+    background-image: url(../png/bg-petafull.png);
+    background-size: cover;
 }
 
 .jumbotron-profile {
@@ -313,6 +315,11 @@ body {
 .img-profile {
     /* margin-top: 10rem; */
     margin-right: 5rem;
+}
+
+.img-d-art {
+    width: 770px;
+    border-radius: 20px;
 }
 
 
@@ -487,6 +494,17 @@ body {
     }
 }
 
+
+@media screen and (max-width: 1000px) {
+    .navbar-nav {
+        margin-top: 1rem !important;
+    }
+    .img-d-art {
+        width: 100%;
+    }
+    
+}
+
 @media screen and (max-width: 800px) {
     .card-artikel {
        width: auto;
@@ -495,12 +513,6 @@ body {
     .card-event {
         width: auto;
      }
-}
-
-@media screen and (max-width: 1000px) {
-    .navbar-nav {
-        margin-top: 1rem !important;
-    }
 }
 
 

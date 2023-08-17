@@ -8,7 +8,7 @@
                 visi,
                 misi, serta layanan yang kami sediakan untuk membantu anda!</p>
             <div class="text-center">
-                <a href="" class="btn btn-light text-main border-main py-2 px-5 mt-4">Lihat Selengkapnya</a>
+                <a href="#tentang-kami" class="btn btn-light text-main border-main py-2 px-5 mt-4">Lihat Selengkapnya</a>
             </div>
         </div>
     </section>
@@ -39,7 +39,7 @@
         <h1 class="fw-bold">Visi & Misi</h1>
         <h3>DPC PERSAGI KARAWANG</h3>
     </div>
-    <section id="visi-misi" class="bg-secondary visi-misi">
+    <section id="visi-misi" class="jumbotron bg-secondary visi-misi">
         <div class="container pt-5">
             <div class="card mx-auto bg-main text-center" style="max-width: 47rem; border-radius:0">
                 <div class="card-header" style="font-size: 24px">

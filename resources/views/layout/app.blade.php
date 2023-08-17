@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="nav-mid bg-white py-3">
-        <img src="Assets/png/logo-persagi.png" alt="" class="img-fluid d-block mx-auto nav-img">
+        <img src="{{ asset('Assets/png/logo-persagi.png') }}" alt="" class="img-fluid d-block mx-auto nav-img">
         <p class="text-center text-main na-title">“ Dorong kesejahteraan gizi, dengan dukungan PERSAGI ”</p>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-main sticky-top">
@@ -103,10 +103,10 @@
 
 
     <!--footer-->
-    <footer class="bg-white text-white text-left pt-3">
+    <footer class="bg-white text-white text-left py-3">
         <div class="container">
             <div class="footer-content d-flex ">
-                <img src="Assets/png/Logo_Persagi 1.png" alt="Logo Situs" width="50px">
+                <img src="{{ asset('assets/png/Logo.png') }}" class="pb-2" alt="Logo Situs" width="50px">
                 <div class="txt-f ms-2">
                     <p class="mb-0">DPC PERSAGI</p>
                     <p>KARAWANG</p>

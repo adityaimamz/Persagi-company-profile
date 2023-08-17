@@ -57,6 +57,17 @@ Route::get('/artikel', function() {
     ]);
 }); 
 
+Route::get('/artikel/detail/{slug}', function($slug) {
+    $artikel = Article::where('slug', $slug)->first();
+    $artikels = Article::where('id', '!=', $slug)->paginate(4); // Mengambil artikel lainnya, kecuali yang sedang ditampilkan
+    return view('artikel-detail', [
+        'artikel' => $artikel,
+        'artikels' => $artikels,
+        'title' => 'Artikel'
+    ]);
+});
+
+
 Route::get('/event', function() {
     $events=Event::paginate(4);
     return view('event', [

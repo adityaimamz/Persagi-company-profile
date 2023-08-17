@@ -8,7 +8,7 @@
                 visi,
                 misi, serta layanan yang kami sediakan untuk membantu anda!</p>
             <div class="text-center">
-                <a href="" class="btn btn-light text-main border-main py-2 px-5 mt-4">Lihat Selengkapnya</a>
+                <a href="#kontak-kami" class="btn btn-light text-main border-main py-2 px-5 mt-4">Lihat Selengkapnya</a>
             </div>
         </div>
     </section>

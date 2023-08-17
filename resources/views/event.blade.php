@@ -6,12 +6,12 @@
             <h1 class="text-center fw-bold pt-2 subtitle-jumbotron-profile">DPC PERSAGI KARAWANG</h1>
             <p class="text-center pt-2 text-jumbotron-profile">Dapatkan informasi dan ikuti berbagai kegiatan yang diadakan oleh kami disini</p>
             <div class="text-center">
-                <a href="" class="btn btn-light text-main border-main py-2 px-5 mt-4">Lihat Selengkapnya</a>
+                <a href="#event" class="btn btn-light text-main border-main py-2 px-5 mt-4">Lihat Selengkapnya</a>
             </div>
         </div>
     </section>
     <!-- event Populer -->
-    <section class="bg-white">
+    <section id="event" class="bg-white">
         <div class="container pb-5">
             <div class=" text-left py-5 m-auto">
                 <h1>

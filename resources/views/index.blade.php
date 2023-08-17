@@ -10,7 +10,7 @@
                 Karawang.
                 Bersama-sama, kami mengajak Anda untuk meraih kesehatan optimal melalui informasi terkini
                 seputar gizi, serta layanan unggulan yang dirancang khusus untuk masyarakat Karawang.</h2>
-            <img src="Assets/png/jumbotron.png" alt="" class="img-fluid d-block mx-auto my-4 img-jumbotron">
+            <img src="assets/png/jumbotron.png" alt="" class="img-fluid d-block mx-auto my-4 img-jumbotron">
             <button type="button" class="btn btn-lg button-lg d-block mx-auto btn-jumbotron no-hover">Layanan Utama
                 Persagi</button>
         </div>
@@ -56,11 +56,11 @@
                         <div class="card swiper-slide" style="width: 18rem;">
                             <img src="http://localhost:8001/storage/{{ $item->gambar }}" class="card-img-top"
                                 alt="...">
-                            <div class="card-body">
+                            <div class="card-body ">
                                 <h5 class="card-title text-start text-title">{{ $item->judul }}</h5>
                                 <p class="text-start text-secondary-emphasis">
                                     {{ \Carbon\Carbon::parse($item->created_at)->locale('id')->diffForHumans() }}</p>
-                                <a href="#" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
+                                <a href="/artikel/detail/{{ $item->slug }}" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
                             </div>
                         </div>
                     @endforeach
@@ -69,10 +69,12 @@
             </div>
             <div>
 
-            </div><button class="btn btn-outline-art d-flex mx-auto mt-5 ">
-                Lihat Artikel Lainnya
-            </button>
-
+            </div>
+            <a href="/artikel">
+                <button class="btn btn-outline-art d-flex mx-auto mt-5 ">
+                    Lihat Artikel Lainnya
+                </button>
+            </a>
         </div>
         </div>
     </section>
@@ -107,7 +109,7 @@
                                         <p class="txt-foot"> Online (Zoom Meeting)
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn-light text-main border-main mb-3 me-auto ">Baca
+                                    <a href="" class="btn btn-light text-main border-main mb-3 me-auto ">Baca
                                         Selengkapnya</a>
                                 </div>
                             </div>
@@ -116,9 +118,11 @@
                     @endforeach
                 </div>
                 <div>
-                    <button class="btn btn-outline-art d-flex mx-auto mt-5">
-                        Lihat Event Lainnya
-                    </button>
+                    <a href="/event">
+                        <button class="btn btn-outline-art d-flex mx-auto mt-5">
+                            Lihat Event Lainnya
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="swiper-pagination"></div>

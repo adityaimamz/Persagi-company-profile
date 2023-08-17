@@ -7,19 +7,19 @@
             <p class="text-center pt-2 text-jumbotron-profile">Apa saja layanan yang disediakan oleh DPC Persagi Karawang?
                 Simak beberapa layanan yang kami sediakan dibawah ini!</p>
             <div class="text-center">
-                <a href="" class="btn btn-light text-main border-main py-2 px-5 mt-4">Lihat Selengkapnya</a>
+                <a href="#layanan" class="btn btn-light text-main border-main py-2 px-5 mt-4">Lihat Selengkapnya</a>
             </div>
         </div>
     </section>
     <!-- Artikel Populer -->
-    <section class="bg-white">
+    <section id="layanan" class="jumbotron bg-secondary">
         <div class="container pb-5">
             <div class=" text-left py-5">
                 <h1 class="fw-bold">LAYANAN</h1>
                 <h3 class="text-main fw-semibold text-kontak">DPC PERSAGI KARAWANG</h3>
                 <p class="text-kontak"">Berikut 3 Layanan utama yang kami sediakan untuk anda</p>
             </div>
-            <div class="card mb-5" style="max-width: 100%;">
+            <div class="card mb-3" style="max-width: 100%;">
                 <div class="row g-0">
                     <div class="col-md-3">
                         <lottie-player src="https://lottie.host/f74a3e49-2b73-49ca-9a4e-045721bd37fb/Up1U9xfEYZ.json"
@@ -29,7 +29,7 @@
                     <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title">Status Gizi</h5>
-                            <p class="card-text">Layanan ini adalah solusi cepat dan efektif untuk menilai status gizi pada
+                            <p class="card-text text-justify">Layanan ini adalah solusi cepat dan efektif untuk menilai status gizi pada
                                 balita dan orang dewasa melalui perhitungan Indeks Masa Tubuh (IMT). IMT adalah metode
                                 sederhana yang mengukur proporsi berat badan terhadap tinggi badan. Dengan memasukkan data
                                 berat dan tinggi, layanan ini memberikan informasi penting mengenai kategori gizi, membantu
@@ -52,7 +52,7 @@
                     <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title">Konsultasi</h5>
-                            <p class="card-text">Layanan ini merupakan jembatan antara Anda dan para ahli gizi
+                            <p class="card-text text-justify">Layanan ini merupakan jembatan antara Anda dan para ahli gizi
                                 terkualifikasi untuk menemukan solusi gizi yang sesuai dengan kebutuhan dan kondisi
                                 kesehatan Anda. Baik Anda ingin mengatasi masalah berat badan, mengelola kondisi medis
                                 tertentu, atau hanya ingin memahami bagaimana menjalani gaya hidup sehat, para ahli gizi
@@ -76,7 +76,7 @@
                     <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title">Pendaftaran Anggota DPC Persagi Karawang</h5>
-                            <p class="card-text">Siap untuk menjadi bagian dari komunitas yang berfokus pada perkembangan
+                            <p class="card-text text-justify">Siap untuk menjadi bagian dari komunitas yang berfokus pada perkembangan
                                 pribadi dan kolektif? Layanan pendaftaran anggota kami memberi Anda kesempatan untuk
                                 terlibat dalam berbagai kegiatan, membangun jaringan, dan berkontribusi pada tujuan bersama.
                                 Bergabunglah sekarang dan jadilah bagian dari perubahan positif!</p>

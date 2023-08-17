@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const toTopButton = document.getElementById("toTopButton");
 
@@ -56,4 +54,28 @@ var swiper = new Swiper(".mySwiper", {
     autoplay: {
         delay: 3000, // Ubah nilai ini sesuai keinginan (dalam milidetik)
     },
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const copyButton = document.getElementById("copyButton");
+    const copyLink = document.getElementById("copyLink");
+
+    copyLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Menghentikan aksi default (scroll ke atas)
+
+        const urlToCopy = window.location.href;
+
+        const tempInput = document.createElement("input");
+        tempInput.value = urlToCopy;
+        document.body.appendChild(tempInput);
+
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        copyButton.style.display = "inline-block";
+        setTimeout(function () {
+            copyButton.style.display = "none";
+        }, 2000);
+    });
 });
