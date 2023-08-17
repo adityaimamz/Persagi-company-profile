@@ -10,7 +10,7 @@
                 Karawang.
                 Bersama-sama, kami mengajak Anda untuk meraih kesehatan optimal melalui informasi terkini
                 seputar gizi, serta layanan unggulan yang dirancang khusus untuk masyarakat Karawang.</h2>
-            <img src="assets/png/jumbotron.png" alt="" class="img-fluid d-block mx-auto my-4 img-jumbotron">
+            <img src="assets/png/hero-img.png" alt="" class="img-fluid d-block mx-auto my-4 img-jumbotron">
             <button type="button" class="btn btn-lg button-lg d-block mx-auto btn-jumbotron no-hover">Layanan Utama
                 Persagi</button>
         </div>
@@ -47,35 +47,29 @@
 
 
     <section class="bg-white pb-3">
-        <div class="container mb-5">
-            <div class="Artikel d-flex justify-content-center py-5 ">Artikel
-            </div>
-            <div class="swiper mySwiper py-5 ">
+        <div class="container">
+            <h2 class="d-flex text-start pb-5 gap-2 fw-bold">Artikel
+                <span class="text-main"> Lainya</span>
+            </h2>
+            <div class="swiper mySwiper pb-5">
                 <div class="swiper-wrapper">
                     @foreach ($artikels as $item)
+                        <!-- Tampilkan daftar artikel lainnya -->
                         <div class="card swiper-slide" style="width: 18rem;">
                             <img src="http://localhost:8001/storage/{{ $item->gambar }}" class="card-img-top"
                                 alt="...">
-                            <div class="card-body ">
+                            <div class="card-body">
                                 <h5 class="card-title text-start text-title">{{ $item->judul }}</h5>
                                 <p class="text-start text-secondary-emphasis">
                                     {{ \Carbon\Carbon::parse($item->created_at)->locale('id')->diffForHumans() }}</p>
-                                <a href="/artikel/detail/{{ $item->slug }}" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
+                                <a href="/artikel/detail/{{ $item->slug }}"
+                                    class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
                             </div>
                         </div>
                     @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <div>
-
-            </div>
-            <a href="/artikel">
-                <button class="btn btn-outline-art d-flex mx-auto mt-5 ">
-                    Lihat Artikel Lainnya
-                </button>
-            </a>
-        </div>
         </div>
     </section>
 

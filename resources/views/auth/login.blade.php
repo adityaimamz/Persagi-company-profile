@@ -29,7 +29,7 @@
             </div>
             <div class="col">
                 <div class="row">
-                    <img src="Assets/png/jumbotron.png" style="width: 594px;">
+                    <img src="Assets/png/hero-img.png" style="width: 594px;">
                 </div>
                 <div class="row" style="margin-top: -100px ;">
                     <div class="card login-form card-form">

@@ -75,3 +75,13 @@ Route::get('/event', function() {
         'title' => 'Event'
     ]);
 }); 
+
+Route::get('/event/detail/{slug}', function($slug) {
+    $event = Event::where('slug', $slug)->first();
+    $events = Event::where('id', '!=', $slug)->paginate(4); // Mengambil event lainnya, kecuali yang sedang ditampilkan
+    return view('event-detail', [
+        'event' => $event,
+        'events' => $events,
+        'title' => 'Event'
+    ]);
+});

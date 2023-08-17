@@ -38,7 +38,7 @@
                                 <p class="txt-foot"> Online (Zoom Meeting)
                                 </p>
                             </div>
-                            <a href="#" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
+                            <a href="/event/detail/{{ $item->slug }}" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
                         </div>
                     </div>
                 @endforeach

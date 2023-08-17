@@ -28,7 +28,7 @@
                         mendidik, dan mendorong perubahan positif dalam gaya hidup dan pola makan.</p>
                 </div>
                 <div class="col-md-5 text-md-end">
-                    <img src="Assets/png/Logo_Persagi 1.png" class="img-profile" alt="">
+                    <img src="{{ asset('assets/png/Logo.png') }}" class="img-profile" alt="">
                 </div>
             </div>
         </div>

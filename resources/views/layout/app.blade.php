@@ -35,17 +35,28 @@
                 {{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMMM YYYY, HH:mm [WIB]') }}</p>
                 @if (Auth::user())
                     <a href="" data-bs-toggle="dropdown" class="text-white">
-                        <img src="{{ asset('Assets/png/defaultpp.jpeg') }}" alt="" width="20px" class="rounded-circle"><span class="mx-3">{{ Auth::user()->username }}</span><img src="{{ asset('assets/png/arrow.png') }}" alt="">
+                        <img src="{{ asset('Assets/png/defaultpp.jpeg') }}" alt="" width="25px" class="rounded-circle"><span class="mx-2">{{ Auth::user()->username }}</span><img src="{{ asset('assets/png/arrow.png') }}" alt="">
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>{{ Auth::user()->name }}</h6>
-                            <span>{{ Auth::user()->username }}</span>
+                            <h6 class="text-center text-main">{{ Auth::user()->name }}</h6>
+                            <p class="text-center" style="margin-bottom: 0">{{ Auth::user()->username }}</p>
                         </li>
                         <li> 
                             <hr class="dropdown-divider" />
                         </li>
-
+                        <li>
+                            <a
+                                class="dropdown-item d-flex align-items-center"
+                                href="users-profile.html"
+                            >
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
                         <li>
                             <a
                                 class="dropdown-item d-flex align-items-center"
@@ -103,7 +114,7 @@
 
 
     <!--footer-->
-    <footer class="bg-white text-white text-left py-3">
+    <footer class="bg-white text-white text-left pt-3">
         <div class="container">
             <div class="footer-content d-flex ">
                 <img src="{{ asset('assets/png/Logo.png') }}" class="pb-2" alt="Logo Situs" width="50px">
