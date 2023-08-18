@@ -49,6 +49,12 @@ Route::get('/layanan', function() {
     ]);
 }); 
 
+Route::get('myprofile', function() {
+    return view('user-profile',[
+        'title' => 'My Profile'
+    ]);
+});
+
 Route::get('/artikel', function() {
     $artikels=Article::paginate(3);
     return view('artikel', [
