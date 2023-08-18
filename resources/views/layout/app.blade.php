@@ -35,7 +35,7 @@
                 {{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMMM YYYY, HH:mm [WIB]') }}</p>
                 @if (Auth::user())
                     <a href="" data-bs-toggle="dropdown" class="text-white">
-                        <img src="{{ asset('Assets/png/defaultpp.jpeg') }}" alt="" width="25px" class="rounded-circle"><span class="mx-2">{{ Auth::user()->username }}</span><img src="{{ asset('assets/png/arrow.png') }}" alt="">
+                        <img src="{{ asset('Assets/png/defaultpp.jpeg') }}" alt="" width="25px" class="rounded-circle "><span class="mx-2">{{ Auth::user()->username }}</span><img src="{{ asset('assets/png/arrow.png') }}" alt="">
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">

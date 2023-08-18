@@ -137,7 +137,9 @@ body {
     border-color: #005BAB !important;
 }
 
-
+.img-event {
+    width: 400px;
+}
 
 .title-jumbotron {
     font-size: 48px;
@@ -176,6 +178,7 @@ body {
 
 .nav-mid {
     background-image: url(../png/bg-navbar.png);
+    background-size: cover;
 }
 
 .fw-300 {
@@ -353,6 +356,7 @@ body {
     font-weight: bold;
     color: #2E367E;
 }
+
 
 .btn-outline-art {
     font-size: 20px;
