@@ -98,10 +98,18 @@ body {
 }
 
 .bg-main {
-    background-color: #005BAB;
+    background-color: #005BAB !important;
     color: #fff;
     font-size: small;
     width: 100%;
+}
+
+.bio {
+    padding: 0 30px;
+}
+
+.nav-link.active {
+    background-color: #005BAB !important;
 }
 
 .container-maps {
