@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class BiodataUser extends Model
 {
     use HasFactory;
+    protected $table = 'biodata_users';
+    protected $guarded = ['id'];
 }
