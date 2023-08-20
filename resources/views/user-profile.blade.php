@@ -7,10 +7,15 @@
                     <div class="user-tabs">
                         <div class="card" style="width: 14rem;">
                             <div class="card-header text-center bg-main">
+                                @if ($data == null)
                                 <img class="rounded-circle pt-2" style="width:100px"
                                     src="{{ asset('assets/png/defaultpp.jpeg') }}">
-                                <h6 class="pt-2">Nama </h6>
-                                <span>Username</span>
+                                @else
+                                    <img class="rounded-circle pt-2" style="width:100px"
+                                        src="{{ Storage::url($data->gambar) }}">
+                                @endif
+                                <h6 class="pt-2">{{ Auth::user()->name }}</h6>
+                                <span>{{ Auth::user()->username }}</span>
                             </div>
                             <div class="nav flex-column nav-pills p-2 " id="v-pills-tab" role="tablist"
                                 aria-orientation="vertical">
@@ -27,8 +32,8 @@
                                     aria-controls="v-pills-change-password" aria-selected="false"><i
                                         class="ri-lock-2-line"></i>
                                     Ganti Kata Sandi</button></button>
-                                <button class="nav-link text-start"><i class="ri-logout-circle-line pr-2"></i>
-                                    Keluar</button></button>
+                                <a href="{{ route('logout') }}" class="nav-link text-start"><i class="ri-logout-circle-line pr-2"></i>
+                                    Keluar</a></button>
                             </div>
                         </div>
                     </div>
@@ -46,7 +51,7 @@
                                                 <label>Username</label>
                                             </div>
                                             <div class="col-md-7">
-                                                <p>: Lutfihakim123</p>
+                                                <p>: {{ Auth::user()->username }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -54,7 +59,15 @@
                                                 <label>Nama Lengkap</label>
                                             </div>
                                             <div class="col-md-7">
-                                                <p>: Ahmad Lutfi Hakim</p>
+                                                <p>: {{ Auth::user()->name }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <label>Jenis Kelamin</label>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <p>: {{ ($data == null ? "Belum Diisi" : $data->jenis_kelamin) }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -62,7 +75,7 @@
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-7">
-                                                <p>: ahmadlutfi@gmail.com</p>
+                                                <p>: {{Auth::user()->email}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -70,7 +83,7 @@
                                                 <label>Nomor Handphone</label>
                                             </div>
                                             <div class="col-md-7">
-                                                <p>: 0895123456789</p>
+                                                <p>: {{ ($data == null) ? "Belum Diisi" : $data->no_handphone }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -78,7 +91,7 @@
                                                 <label>Tempat Tanggal Lahir</label>
                                             </div>
                                             <div class="col-md-7">
-                                                <p>: Demak, 16 Maret 2002</p>
+                                                <p>: {{ ($data == null) ? "Belum Diisi" : $data->tanggal_lahir }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -86,7 +99,7 @@
                                                 <label>Agama</label>
                                             </div>
                                             <div class="col-md-7">
-                                                <p>: Islam</p>
+                                                <p>: {{ ($data == null) ? "Belum Diisi" : $data->agama }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -94,8 +107,7 @@
                                                 <label>Alamat</label>
                                             </div>
                                             <div class="col-md-7">
-                                                <p>: Perumahan Citra Pratama, Jalan Kenanga Blok A No.13 Sumampir,
-                                                    Purwokerto Utara, Kab. Banyumas, Jawa Tengah, Indonesia</p>
+                                                <p>: {{ ($data == null) ? "Belum Diisi" : $data->alamat_tinggal }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +123,7 @@
                                 </div>
                                 <div class="card-body text-center">
                                     <div class="container">
-                                        <form class="text-start text-main py-3" action="" method="POST"
+                                        <form class="text-start text-main py-3" action="{{ route('myprofile.store') }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="mb-3">
@@ -122,32 +134,37 @@
                                             <div class="mb-3">
                                                 <label for="nama" class="form-label">Nama Lengkap</label>
                                                 <input type="text" class="form-control" id="nama" name="nama"
+                                                    required value="{{ Auth::user()->name }}">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="nama" class="form-label">Jenis Kelamin</label>
+                                                <input type="text" class="form-control" id="jk" name="jk" value="{{ ($data==null) ? "" : $data->jenis_kelamin }}"
                                                     required>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="tempatTanggalLahir" class="form-label">Tempat Tanggal
+                                                <label for="tempatTanggalLahir" class="form-label">Tanggal
                                                     Lahir</label>
-                                                <input type="text" class="form-control" id="tempatTanggalLahir"
-                                                    name="tempat_tanggal_lahir" required>
+                                                <input type="date" class="form-control" id="TanggalLahir"
+                                                    name="tanggal_lahir" required value="{{ ($data==null) ? "" : $data->tanggal_lahir }}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="nomorHandphone" class="form-label">Nomor Handphone</label>
                                                 <input type="tel" class="form-control" id="nomorHandphone"
-                                                    name="nomor_handphone" required>
+                                                    name="nomor_handphone" value="{{ ($data==null) ? "" : $data->no_handphone }}" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="email" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email" name="email"
+                                                <input type="email" class="form-control" id="email" name="email" value="{{ ($data==null) ? "" : $data->email }}"
                                                     required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="agama" class="form-label">Agama</label>
-                                                <input type="text" class="form-control" id="agama" name="agama"
+                                                <input type="text" class="form-control" id="agama" name="agama" value="{{ ($data==null) ? "" : $data->agama }}"
                                                     required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="alamat" class="form-label">Alamat</label>
-                                                <input type="text" class="form-control" id="alamat" name="alamat"
+                                                <input type="text" class="form-control" id="alamat" name="alamat" {{ ($data==null) ? "" : $data->alamat_tinggal }}
                                                     required>
                                             </div>
                                             <div class="text-center">
@@ -172,28 +189,32 @@
                                         @else
                                         <input type="hidden" name="id" value="{{ $data->user_id }}">
                                         @endif --}}
-                                    <div class="row mb-3">
-                                        <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Password
-                                            Baru</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="newpassword" type="password" class="form-control"
-                                                id="newPassword">
+                                    <form action="{{ route('login.change') }}" method="POST">
+                                        @method('PUT')
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ Auth::user()->id }}">
+                                        <div class="row mb-3">
+                                            <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Password
+                                                Baru</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="newpassword" type="password" class="form-control"
+                                                    id="newPassword">
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Ulangi
-                                            Password Baru</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="newpassword_confirmation" type="password" class="form-control"
-                                                id="renewPassword">
+    
+                                        <div class="row mb-3">
+                                            <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Ulangi
+                                                Password Baru</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="newpassword_confirmation" type="password" class="form-control"
+                                                    id="renewPassword">
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="text-center">
-                                        <button type="submit" style="width: 250px" class="btn btn-primary">Ubah
-                                            Password</button>
-                                    </div>
+                                        <div class="text-center">
+                                            <button type="submit" style="width: 250px" class="btn btn-primary">Ubah
+                                                Password</button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

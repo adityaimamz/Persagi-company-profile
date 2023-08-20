@@ -1,11 +1,15 @@
 <?php
 
+use App\Models\Event;
+use App\Models\Article;
+use App\Models\BiodataUser;
+use App\Http\Controllers\KontakUser;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
-use App\Http\Controllers\KontakUser;
-use App\Models\Article;
-use App\Models\Event;
+use App\Http\Controllers\BiodataController;
+use App\Http\Controllers\BiodataUser as ControllersBiodataUser;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +34,7 @@ Route::get('/', function () {
 
 route::get('/login', [LoginController::class, 'index'])->name('login');
 route::post('/login', [LoginController::class, 'store'])->name('login.store');
+route::put('/change', [LoginController::class, 'change'])->name('login.change');
 route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 route::get('/register', [RegisterController::class, 'index'])->name('register');
 route::post('/register', [RegisterController::class, 'store'])->name('register.store');
@@ -49,11 +54,7 @@ Route::get('/layanan', function() {
     ]);
 }); 
 
-Route::get('myprofile', function() {
-    return view('user-profile',[
-        'title' => 'My Profile'
-    ]);
-});
+Route::resource('myprofile', BiodataController::class);
 
 Route::get('/artikel', function() {
     $artikels=Article::paginate(3);

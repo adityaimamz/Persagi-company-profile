@@ -37,4 +37,14 @@ class LoginController extends Controller
 
         return redirect('login');
     }
+
+    public function change(Request $request) {
+        if ($request->newpassword != $request->newpassword_confirmation) {
+            return redirect()->back()->with('login', 'Konfirmasi Password Salah!');
+        }
+
+       if (User::where('id', $request->id)->update(['password' => Hash::make($request->newpassword)])) {
+        return redirect()->back();
+       };
+    }
 }
