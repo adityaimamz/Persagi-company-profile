@@ -675,3 +675,39 @@ line-height: normal;
 
 }
 
+.konten-tabs {
+    width: 40rem;
+}
+
+
+.profile-container {
+    display: flex;
+    padding: 0 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-user {
+    padding: 0 30px
+}
+
+@media (min-width: 768px) {
+    .profile-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .user-tabs {
+        margin-right: 20px;
+    }
+    .button-user {
+        width: 250px;
+    }
+
+}
+
+@media screen and (max-width: 765px) {
+    .konten-tabs {
+        width: 100%;
+    }
+}
