@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Models\Event;
 use App\Models\Article;
 use App\Models\BiodataUser;
@@ -10,6 +11,7 @@ use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\BiodataUser as ControllersBiodataUser;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +56,7 @@ Route::get('/layanan', function() {
     ]);
 }); 
 
-Route::resource('myprofile', BiodataController::class);
+Route::resource('myprofile', BiodataController::class)->middleware('auth');
 
 Route::get('/artikel', function() {
     $artikels=Article::paginate(3);

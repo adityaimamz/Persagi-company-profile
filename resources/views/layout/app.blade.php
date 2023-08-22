@@ -16,10 +16,7 @@
     <link href="{{ asset('assets/vendor/simple-datatables/style.css') }}" rel="stylesheet" />
     <!-- My Style -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-  />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- Logo Title Bar -->
     <link rel="icon" href="Assets/png/logo-persagi.png" type="image/x-icon">
 
@@ -33,43 +30,39 @@
         <div class="container d-flex justify-content-between">
             <p class="my-auto fs-6 fw-500 nav-date">
                 {{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMMM YYYY, HH:mm [WIB]') }}</p>
-                @if (Auth::user())
-                    <a href="" data-bs-toggle="dropdown" class="text-white">
-                        <img src="{{ asset('Assets/png/defaultpp.jpeg') }}" alt="" width="25px" class="rounded-circle "><span class="mx-2">{{ Auth::user()->username }}</span><img src="{{ asset('assets/png/arrow.png') }}" alt="">
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                        <li class="dropdown-header">
-                            <h6 class="text-center text-main">{{ Auth::user()->name }}</h6>
-                            <p class="text-center" style="margin-bottom: 0">{{ Auth::user()->username }}</p>
-                        </li>
-                        <li> 
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                            <a
-                                class="dropdown-item d-flex align-items-center"
-                                href="/myprofile"
-                            >
-                                <i class="bi bi-person"></i>
-                                <span>&nbsp My Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                            <a
-                                class="dropdown-item d-flex align-items-center"
-                                href="{{ route('logout') }}"
-                            >
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>&nbsp Sign Out</span>
-                            </a>
-                        </li>
-                    </ul>
-                @else
+            @if (Auth::user())
+                <a href="" data-bs-toggle="dropdown" class="text-white">
+                    <img src="{{ asset('Assets/png/defaultpp.jpeg') }}" alt="" width="25px"
+                        class="rounded-circle "><span class="mx-2">{{ Auth::user()->username }}</span><img
+                        src="{{ asset('assets/png/arrow.png') }}" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                        <h6 class="text-center text-main">{{ Auth::user()->name }}</h6>
+                        <p class="text-center" style="margin-bottom: 0">{{ Auth::user()->username }}</p>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="/myprofile">
+                            <i class="bi bi-person"></i>
+                            <span>&nbsp My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>&nbsp Sign Out</span>
+                        </a>
+                    </li>
+                </ul>
+            @else
                 <a href="/login"><button class="btn btn-main px-3 fw-medium" type="button">Masuk</button></a>
-                @endif
+            @endif
         </div>
     </div>
     <div class="nav-mid bg-white py-3">
@@ -86,22 +79,23 @@
             <div class="collapse navbar-collapse txt-nav" id="navbarNavAltMarkup">
                 <ul class="navbar-nav mx-auto gap-3">
                     <li class="nav-item">
-                        <a class="nav-link {{ ($title === 'Beranda' ? 'active' : '') }}" aria-current="page" href="/">Beranda</a>
+                        <a class="nav-link {{ $title === 'Beranda' ? 'active' : '' }}" aria-current="page"
+                            href="/">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ ($title === 'Profile' ? 'active' : '') }}" href="/profile">Profile</a>
+                        <a class="nav-link {{ $title === 'Profile' ? 'active' : '' }}" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ ($title === 'Layanan' ? 'active' : '') }}" href="/layanan">Layanan</a>
+                        <a class="nav-link {{ $title === 'Layanan' ? 'active' : '' }}" href="/layanan">Layanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ ($title === 'Artikel' ? 'active' : '') }}" href="/artikel">Artikel</a>
+                        <a class="nav-link {{ $title === 'Artikel' ? 'active' : '' }}" href="/artikel">Artikel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ ($title === 'Event' ? 'active' : '') }}" href="/event">Event</a>
+                        <a class="nav-link {{ $title === 'Event' ? 'active' : '' }}" href="/event">Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ ($title === 'Kontak' ? 'active' : '') }}" href="/kontak">Kontak</a>
+                        <a class="nav-link {{ $title === 'Kontak' ? 'active' : '' }}" href="/kontak">Kontak</a>
                     </li>
                 </ul>
             </div>
@@ -172,7 +166,8 @@
                     <div class="col">
                         <img src="Assets/png/Line 5.png" alt="" width="100%" class="mb-3">
                         <p class="text-center">DPC Persagi Karawang, All right reserved</p>
-                        <p class="text-center">Designed and Developed by Students of Institute Technology Telkom Purwokerto</p>
+                        <p class="text-center">Designed and Developed by Students of Institute Technology Telkom
+                            Purwokerto</p>
                     </div>
                 </div>
             </div>
@@ -182,7 +177,6 @@
         </button>
 
     </footer>
-
 
 
 
@@ -202,7 +196,8 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <!-- Initialize Swiper -->
-        <script src="{{ asset('assets/js/app.js') }}"></script>
-        @yield('js')
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+    @yield('js')
 </body>
+
 </html>

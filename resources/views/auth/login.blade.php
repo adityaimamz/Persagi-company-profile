@@ -36,10 +36,11 @@
                         <div class="card-body">
                             <h1 class="card-title d-blok text-center text-main">Masuk</h1>
                             @if (Session::has('login'))
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                {{ Session::get('login') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    {{ Session::get('login') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
                             @endif
                             <div class="card-text">
                                 <form action="{{ route('login.store') }}" method="POST">
@@ -52,7 +53,8 @@
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Kata Sandi</label>
                                         <div class="input-group">
-                                            <input type="password" class="form-control" id="password" name="password" required>
+                                            <input type="password" class="form-control" id="password" name="password"
+                                                required>
                                             <button type="button" id="togglePassword"
                                                 class="btn btn-outline-secondary"><i class="bi-eye"></i></button>
                                         </div>
