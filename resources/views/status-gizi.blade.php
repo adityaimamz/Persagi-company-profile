@@ -53,9 +53,6 @@
                             aria-labelledby="dewasa-tab">
                             <div class="container" style="max-width: 700px">
                                 <h4 class="text-center">Masukan Data</h4>
-                                <form action="{{ route('login.change') }}" method="POST">
-                                    @method('PUT')
-                                    @csrf
                                     {{-- <input type="hidden" name="id" value="{{ Auth::user()->id }}"> --}}
                                     <div class="row mb-3">
                                         <label for="jenisKelamin" class="col-md-4 col-lg-3 col-form-label">Jenis
@@ -86,9 +83,8 @@
                                         </div>
                                     </div>
                                     <div class="text-center mb-3">
-                                        <button type="submit" class="btn btn-primary w-full">Hitung IMT</button>
+                                        <button type="submit" class="btn btn-primary w-full" id="hitungBMI">Hitung IMT</button>
                                     </div>
-                                </form>
                             </div>
 
                         </div>
@@ -132,7 +128,7 @@
                                         <label for="usiaDiukur" class="col-md-4 col-lg-3 col-form-label">
                                             Usia Diukur (Bulan)</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <input name="usiaDiukur" type="number" class="form-control" id="usiaDiukur">
+                                            <input name="usiaDiukur" type="number" class="form-control" id="usiaDiukur" disabled>
                                         </div>
                                     </div>
 
@@ -164,8 +160,62 @@
             <div class="card mt-4 card-imt">
                 <div class="card-body">
                     <h4 class="text-center">Hasil perhitungan</h4>
+                    <div id="hasil">
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+@endsection
+
+@section('js')
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var tanggalLahirInput = document.getElementById("tanggalLahir");
+      var tanggalDiukurInput = document.getElementById("tanggalDiukur");
+      var usiaDiukurInput = document.getElementById("usiaDiukur");
+
+      tanggalLahirInput.addEventListener("change", updateUsiaDiukur);
+      tanggalDiukurInput.addEventListener("change", updateUsiaDiukur);
+
+      function updateUsiaDiukur() {
+        var tanggalLahir = new Date(tanggalLahirInput.value);
+        var tanggalDiukur = new Date(tanggalDiukurInput.value);
+        
+        var diffInDays = Math.floor((tanggalDiukur - tanggalLahir) / (1000 * 60 * 60 * 24));
+        var diffInMonths = Math.floor(diffInDays / 30) + (diffInDays % 30 == 0 ? 1 : 0);
+        
+        usiaDiukurInput.value = diffInMonths;
+      }
+    });
+  </script>
+<script>
+
+    $("#hitungBMI").on("click", function() {
+        let perhitungan = $("#beratBadan").val() / (($("#tinggiBadan").val() / 100) ** 2);
+        if (perhitungan < 18.5) {
+            $("#hasil").html(`
+                <p>Berdasarkan perhitungan diatas, anda termasuk orang yang kurus. </p>
+                <p>sebaiknya anda melakukan konsultasi dengan pakar gizi agar tubuh anda menjadi normal.</p>
+            `)
+        }else if(perhitungan >= 18.5 && perhitungan <= 24.9) {
+            $("#hasil").html(`
+                <p>Berdasarkan perhitungan diatas, anda termasuk orang yang Normal. </p>
+                <p>Apabila anda merasa kebingungan untuk menjaga tubuh anda, silakan konsultasi dengan pakar gizi.</p>
+            `)
+        }else if(perhitungan >= 25 && perhitungan <= 27) {
+            $("#hasil").html(`
+                <p>Berdasarkan perhitungan diatas, anda termasuk orang yang Gemuk. </p>
+                <p>sebaiknya anda melakukan konsultasi dengan pakar gizi agar tubuh anda menjadi normal.</p>
+            `)
+        }else if(perhitungan > 27) {
+            $("#hasil").html(`
+                <p>Berdasarkan perhitungan diatas, anda termasuk orang yang Obesitas. </p>
+                <p>sebaiknya anda melakukan konsultasi dengan pakar gizi agar tubuh anda menjadi normal.</p>
+            `)
+        }
+    });
+</script>
 @endsection

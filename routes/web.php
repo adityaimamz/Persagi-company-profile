@@ -11,7 +11,7 @@ use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\BiodataUser as ControllersBiodataUser;
-
+use App\Http\Controllers\KonsultasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +61,8 @@ Route::get('/imt', function() {
         'title' => 'Status Gizi'
     ]);
 });
+
+Route::resource('konsultasi', KonsultasiController::class);
 
 Route::resource('myprofile', BiodataController::class)->middleware('auth');
 
