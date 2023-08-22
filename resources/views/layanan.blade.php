@@ -29,15 +29,17 @@
                     <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title">Status Gizi</h5>
-                            <p class="card-text text-justify">Layanan ini adalah solusi cepat dan efektif untuk menilai status gizi pada
+                            <p class="card-text text-justify">Layanan ini adalah solusi cepat dan efektif untuk menilai
+                                status gizi pada
                                 balita dan orang dewasa melalui perhitungan Indeks Masa Tubuh (IMT). IMT adalah metode
                                 sederhana yang mengukur proporsi berat badan terhadap tinggi badan. Dengan memasukkan data
                                 berat dan tinggi, layanan ini memberikan informasi penting mengenai kategori gizi, membantu
                                 dalam pemantauan pertumbuhan dan identifikasi risiko gizi yang perlu diperhatikan. Ini
                                 merupakan alat yang bermanfaat bagi orang tua, perawat, dan tenaga kesehatan dalam menjaga
                                 kesehatan dan nutrisi yang tepat bagi semua kelompok usia.</p>
-                            <button id="btnSubmit" type="submit" class="btn btn-danger btn-primary w-full">Baca
-                                Selengkapnya</button>
+                            <a href="/imt"> <button id="btnSubmit" type="submit"
+                                    class="btn btn-danger btn-primary w-full">Baca
+                                    Selengkapnya</button></a>
                         </div>
                     </div>
                 </div>
@@ -46,8 +48,8 @@
                 <div class="row g-0">
                     <div class="col-md-3">
                         <lottie-player src="https://lottie.host/ec8387c7-9cc8-40f2-a609-2fb1f7bd70f7/oXUG2XSH9J.json"
-                        background="transparent" speed="1" style="max-width: 280px; height: 230px;" loop autoplay
-                        class="img-fluid rounded-start mx-auto"></lottie-player>
+                            background="transparent" speed="1" style="max-width: 280px; height: 230px;" loop autoplay
+                            class="img-fluid rounded-start mx-auto"></lottie-player>
                     </div>
                     <div class="col-md-9">
                         <div class="card-body">
@@ -60,8 +62,9 @@
                                 mendapatkan rekomendasi pribadi, serta merencanakan pola makan yang sesuai dengan gaya hidup
                                 dan preferensi Anda. Dengan dukungan ahli gizi, Anda dapat mengambil langkah-langkah konkret
                                 untuk mencapai keseimbangan gizi dan kesejahteraan yang optimal.</p>
-                            <button id="btnSubmit" type="submit" class="btn btn-danger btn-primary w-full">Baca
-                                Selengkapnya</button>
+                            <a href="konsultasi"> <button id="btnSubmit" type="submit"
+                                    class="btn btn-danger btn-primary w-full">Baca
+                                    Selengkapnya</button></a>
                         </div>
                     </div>
                 </div>
@@ -70,23 +73,23 @@
                 <div class="row g-0">
                     <div class="col-md-3">
                         <lottie-player src="https://lottie.host/7720c2ff-dad3-4202-b2aa-3c76427fdad4/S89oGx1Sjk.json"
-                        background="transparent" speed="1" style="max-width: 280px; height: 230px;" loop autoplay
-                        class="img-fluid rounded-start mx-auto"></lottie-player>
+                            background="transparent" speed="1" style="max-width: 280px; height: 230px;" loop autoplay
+                            class="img-fluid rounded-start mx-auto"></lottie-player>
                     </div>
                     <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title">Pendaftaran Anggota DPC Persagi Karawang</h5>
-                            <p class="card-text text-justify">Siap untuk menjadi bagian dari komunitas yang berfokus pada perkembangan
+                            <p class="card-text text-justify">Siap untuk menjadi bagian dari komunitas yang berfokus pada
+                                perkembangan
                                 pribadi dan kolektif? Layanan pendaftaran anggota kami memberi Anda kesempatan untuk
                                 terlibat dalam berbagai kegiatan, membangun jaringan, dan berkontribusi pada tujuan bersama.
                                 Bergabunglah sekarang dan jadilah bagian dari perubahan positif!</p>
-                            <button id="btnSubmit" type="submit" class="btn btn-danger btn-primary w-fukl">Baca
-                                Selengkapnya</button>
+                            <a href=""> <button id="btnSubmit" type="submit"
+                                    class="btn btn-danger btn-primary w-fukl">Baca
+                                    Selengkapnya</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     @endsection
-
-

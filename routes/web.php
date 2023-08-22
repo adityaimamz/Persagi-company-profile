@@ -54,7 +54,13 @@ Route::get('/layanan', function() {
     return view('layanan',[
         'title' => 'Layanan'
     ]);
-}); 
+});
+
+Route::get('/imt', function() {
+    return view('status-gizi',[
+        'title' => 'Status Gizi'
+    ]);
+});
 
 Route::resource('myprofile', BiodataController::class)->middleware('auth');
 
