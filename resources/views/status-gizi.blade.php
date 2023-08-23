@@ -33,12 +33,14 @@
                     <div class="d-flex flex-wrap justify-content-center pt-2">
                         <ul class="nav nav-pills mb-3 gap-3" id="pills-tab" role="tablist">
                             <li class="nav-item nav-tabs" role="presentation">
-                                <button class="nav-link active" id="pills-dewasa-tab" data-bs-toggle="pill"
+                                <img src="{{ asset('assets/png/dewasa.png') }}" alt="Dewasa" class="button-icon">
+                                <button class="nav-link active nav-link-imt" id="pills-dewasa-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-dewasa" type="button" role="tab"
                                     aria-controls="pills-dewasa" aria-selected="true">Dewasa</button>
                             </li>
                             <li class="nav-item nav-tabs" role="presentation">
-                                <button class="nav-link" id="pills-balita-tab" data-bs-toggle="pill"
+                                <img src="{{ asset('assets/png/balita.png') }}" alt="Balita" class="button-icon pt-3">
+                                <button class="nav-link nav-link-imt" id="pills-balita-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-balita" type="button" role="tab"
                                     aria-controls="pills-balita" aria-selected="false">Balita</button>
                             </li>

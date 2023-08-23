@@ -38,7 +38,7 @@
                                 merupakan alat yang bermanfaat bagi orang tua, perawat, dan tenaga kesehatan dalam menjaga
                                 kesehatan dan nutrisi yang tepat bagi semua kelompok usia.</p>
                             <a href="/imt"> <button id="btnSubmit" type="submit"
-                                    class="btn btn-danger btn-primary w-full">Baca
+                                    class="btn btn-primary w-full">Baca
                                     Selengkapnya</button></a>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                                 dan preferensi Anda. Dengan dukungan ahli gizi, Anda dapat mengambil langkah-langkah konkret
                                 untuk mencapai keseimbangan gizi dan kesejahteraan yang optimal.</p>
                             <a href="konsultasi"> <button id="btnSubmit" type="submit"
-                                    class="btn btn-danger btn-primary w-full">Baca
+                                    class="btn btn-primary w-full">Baca
                                     Selengkapnya</button></a>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                                 terlibat dalam berbagai kegiatan, membangun jaringan, dan berkontribusi pada tujuan bersama.
                                 Bergabunglah sekarang dan jadilah bagian dari perubahan positif!</p>
                             <a href=""> <button id="btnSubmit" type="submit"
-                                    class="btn btn-danger btn-primary w-fukl">Baca
+                                    class="btn btn-primary w-fukl">Baca
                                     Selengkapnya</button></a>
                         </div>
                     </div>

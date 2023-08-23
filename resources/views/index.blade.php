@@ -48,8 +48,7 @@
 
     <section class="bg-white pb-3">
         <div class="container">
-            <h2 class="d-flex text-start pb-5 gap-2 fw-bold">Artikel
-                <span class="text-main"> Lainya</span>
+            <h2 class="text-center Artikel py-5 gap-2 fw-bold">Artikel
             </h2>
             <div class="swiper mySwiper pb-5">
                 <div class="swiper-wrapper">

@@ -81,36 +81,36 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const notifications = document.querySelector(".notifications"),
-        buttons = document.querySelectorAll(".buttons .btn");
+// const notifications = document.querySelector(".notifications"),
+//         buttons = document.querySelectorAll(".buttons .btn");
 
-    const alertDetails = {
-        timer: 5000,
-        danger: {
-            icon: 'fa-circle-xmark',
-            text: 'Peringatan: Ini adalah peringatan berbahaya.',
-        },
-    };
+//     const alertDetails = {
+//         timer: 5000,
+//         danger: {
+//             icon: 'fa-circle-xmark',
+//             text: 'Peringatan: Ini adalah peringatan berbahaya.',
+//         },
+//     };
 
-    const removeAlert = (alert) => {
-        alert.classList.add("hide");
-        if (alert.timeoutId) clearTimeout(alert.timeoutId);
-        setTimeout(() => alert.remove(), 500);
-    };
+//     const removeAlert = (alert) => {
+//         alert.classList.add("hide");
+//         if (alert.timeoutId) clearTimeout(alert.timeoutId);
+//         setTimeout(() => alert.remove(), 500);
+//     };
 
-    const createAlert = (id) => {
-        const { icon, text } = alertDetails[id];
-        const alert = document.createElement("li");
-        alert.className = `toast ${id}`;
-        alert.innerHTML = `<div class="column">
-                               <i class="fa-solid ${icon}"></i>
-                               <span>${text}</span>
-                           </div>
-                           <i class="fa-solid fa-xmark" onclick="removeAlert(this.parentElement)"></i>`;
-        notifications.appendChild(alert);
-        alert.timeoutId = setTimeout(() => removeAlert(alert), alertDetails.timer);
-    };
+//     const createAlert = (id) => {
+//         const { icon, text } = alertDetails[id];
+//         const alert = document.createElement("li");
+//         alert.className = `toast ${id}`;
+//         alert.innerHTML = `<div class="column">
+//                                <i class="fa-solid ${icon}"></i>
+//                                <span>${text}</span>
+//                            </div>
+//                            <i class="fa-solid fa-xmark" onclick="removeAlert(this.parentElement)"></i>`;
+//         notifications.appendChild(alert);
+//         alert.timeoutId = setTimeout(() => removeAlert(alert), alertDetails.timer);
+//     };
 
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => createAlert(btn.id));
-    });
+//     buttons.forEach(btn => {
+//         btn.addEventListener("click", () => createAlert(btn.id));
+//     });

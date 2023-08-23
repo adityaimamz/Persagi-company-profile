@@ -199,19 +199,23 @@ body {
     background-size: cover;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+/* .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     border-radius: 0 !important;
-}
+} */
 
-.nav-pills .nav-link {
+.nav-link-imt {
     width: 120px;
     color: #005BAB;
     border-radius: 0 !important;
     border:2px solid #005BAB !important;
-}
+} 
 
 .card-imt {
     border-radius: 0 !important;
+}
+
+.pt-45 {
+    padding-top: 2.5rem;
 }
 
 .fw-300 {
@@ -684,6 +688,25 @@ body {
     }
 
 }
+
+@media (max-width: 480px) {
+
+    .container,
+    .container-sm {
+        max-width: 380px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .container,
+    .container-sm {
+        max-width: 320px;
+    }
+
+}
+
 
 @media screen and (max-width: 575px) {
     .container-maps {
