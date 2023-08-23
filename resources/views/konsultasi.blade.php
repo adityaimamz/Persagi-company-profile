@@ -117,7 +117,7 @@
                     <label for="Nama pasien" class="col-md-4 col-lg-3 col-form-label">Keluhan</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="keluhan" placeholder="Masukan Deskripsi Keluhan Utama pasien dan jika pasien memiliki riwayat penyakit harap dicantumkan "></textarea>
                 </div>
-                <div class="mb-3">
+                <div class="mb-5">
                     <button type="submit" class="btn btn-primary">Kirim</button>
                 </div>
             </form>
