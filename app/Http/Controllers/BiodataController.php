@@ -15,6 +15,9 @@ class BiodataController extends Controller
      */
     public function index()
     {
+        if (Auth::guest()) {
+            return redirect()->route('login')->with('login', 'Sebelum mengakses, silakan login terlebih dahulu');
+        }
         $data = BiodataUser::where('user_id', Auth::user()->id)->first();
         return view('user-profile',[
             'title' => 'My Profile',
