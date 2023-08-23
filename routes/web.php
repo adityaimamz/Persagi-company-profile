@@ -62,7 +62,7 @@ Route::get('/imt', function() {
     ]);
 });
 
-Route::resource('konsultasi', KonsultasiController::class);
+Route::resource('konsultasi', KonsultasiController::class)->middleware('auth');
 
 Route::resource('myprofile', BiodataController::class)->middleware('auth');
 
