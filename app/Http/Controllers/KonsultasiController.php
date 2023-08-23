@@ -26,6 +26,6 @@ class KonsultasiController extends Controller
             'jadwal_konsultasi' => $request->jadwal_konsultasi,
             'keluhan' => $request->keluhan,
         ]);
-        return "berhasil";
+        return redirect()->route('konsultasi.index')->with('success', 'Data diproses, anda akan segera dihubungi.');
     }
 }

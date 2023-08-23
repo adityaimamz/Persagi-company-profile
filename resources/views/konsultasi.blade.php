@@ -77,9 +77,16 @@
 
         <div class="container" style="max-width: 700px">
             <h2 class="pt-3 text-center fw-semibold">Form Konsultasi</h2>
-            <p class="text-center">Isi form berikut dengan benar dan jelas. Segala informasi yang diisikan disini untuk keperluan kelanjutan
+            <p class="text-center">Isi form berikut dengan benar dan jelas. Segala informasi yang diisikan disini untuk
+                keperluan kelanjutan
                 konsultasi. setelah mengisi form, tunggu beberapa hari untuk mendapatkan info lanjutan dari pihak persagi
                 terkait konsultasi</p>
+            @if (Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ Session::get('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <form action="{{ route('konsultasi.store') }}" method="POST" class="text-main ">
                 @csrf
                 <div class="mb-">
@@ -89,7 +96,8 @@
                 </div>
                 <div class="mb-">
                     <label for="Nama pasien" class="col-md-4 col-lg-3 col-form-label">Nama Pasien</label>
-                    <input type="text" class="form-control" name="pasien" placeholder="Masukan nama p   asien, jika pasian adalah pemohon tulis ulang nama">
+                    <input type="text" class="form-control" name="pasien"
+                        placeholder="Masukan nama pasien, jika pasian adalah pemohon tulis ulang nama">
                 </div>
                 <div class="mb-">
                     <label for="telp" class="col-md-4 col-lg-3 col-form-label">No Telepon</label>
@@ -102,7 +110,8 @@
                     </div>
                     <div class="col-md-6">
                         <label for="Nama pasien" class="col-md-6 col-lg-5 col-form-label">Tinggi Badan (Cm)</label>
-                        <input type="text" class="form-control" name="tinggi_badan" placeholder="Masukan tinggi badan">
+                        <input type="text" class="form-control" name="tinggi_badan"
+                            placeholder="Masukan tinggi badan">
                     </div>
                 </div>
                 <div class="mb-">
@@ -115,7 +124,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="Nama pasien" class="col-md-4 col-lg-3 col-form-label">Keluhan</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" name="keluhan" placeholder="Masukan deskripsi keluhan utama pasien dan jika pasien memiliki riwayat penyakit harap dicantumkan "></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="keluhan"
+                        placeholder="Masukan deskripsi keluhan utama pasien dan jika pasien memiliki riwayat penyakit harap dicantumkan "></textarea>
                 </div>
                 <div class="mb-5">
                     <button type="submit" class="btn btn-primary">Kirim</button>
