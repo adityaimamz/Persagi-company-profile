@@ -64,7 +64,7 @@ Route::get('/imt', function() {
 
 Route::resource('konsultasi', KonsultasiController::class)->middleware('auth');
 
-Route::resource('myprofile', BiodataController::class)->middleware('auth');
+Route::resource('myprofile', BiodataController::class);
 
 Route::get('/artikel', function() {
     $artikels=Article::paginate(3);

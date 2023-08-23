@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Konsultasi;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class KonsultasiController extends Controller
 {
     public function index() {
+        if (Auth::guest()) {
+            return redirect()->route('login')->with('login', 'Sebelum mengakses, silakan login terlebih dahulu');
+        }
         return view('konsultasi', [
             'title' => 'Konsultasi',
         ]);
