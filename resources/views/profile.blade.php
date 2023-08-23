@@ -15,7 +15,7 @@
     <section id="tentang-kami">
         <div class="container container-profile d-flex align-items-center">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-7 text-center tentang-kami">
                     <h1 class="title-profile">TENTANG KAMI</h1>
                     <h2 class="text-main">DPC PERSAGI KARAWANG</h2>
                     <p class="mt-4 fs-9 text-justify text-profile">Kami adalah wadah bagi para ahli gizi dan pemerhati kesehatan di
@@ -79,11 +79,11 @@
     </section>
 
     <section id="struktur-organisasi">
-        <div class="container text-center">
+        <div class="container text-center" style="max-width: 700px">
             <h1 class="fw-bold pt-5">Struktur Organisasi</h1>
             <h3 class="text-main fw-semibold">DPC PERSAGI KARAWANG</h3>
-            <div class="my-5">
-                <img src="Assets/png/struktur organisasi.png" class="img-struktur" alt="">
+            <div class="my-5" >
+                <img src="Assets/png/STRUKTUR__ORGANISASI.png" class="img-struktur" alt="">
             </div>
         </div>
     </section>
