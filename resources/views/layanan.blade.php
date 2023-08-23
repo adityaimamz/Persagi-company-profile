@@ -85,7 +85,7 @@
                                 terlibat dalam berbagai kegiatan, membangun jaringan, dan berkontribusi pada tujuan bersama.
                                 Bergabunglah sekarang dan jadilah bagian dari perubahan positif!</p>
                             <a href=""> <button id="btnSubmit" type="submit"
-                                    class="btn btn-primary w-fukl">Baca
+                                    class="btn btn-primary w-full mt-5">Baca
                                     Selengkapnya</button></a>
                         </div>
                     </div>
