@@ -51,8 +51,8 @@
 
 
     <!--Artikel Lainnya-->
-    <section class="bg-white pb-3">
-        <div class="container">
+    <section class="bg-white pb-3"  style="height: 650px">
+        <div class="container container-artikel">
             <h2 class="d-flex text-start pb-5 gap-2 fw-bold">Artikel
                 <span class="text-main"> Lainya</span>
             </h2>
@@ -60,16 +60,22 @@
                 <div class="swiper-wrapper">
                     @foreach ($artikels as $item)
                         <!-- Tampilkan daftar artikel lainnya -->
-                        <div class="card swiper-slide" style="width: 18rem;">
-                            <img src="http://localhost:8001/storage/{{ $item->gambar }}" class="card-img-top"
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-start text-title">{{ $item->judul }}</h5>
-                                <p class="text-start text-secondary-emphasis">
-                                    {{ \Carbon\Carbon::parse($item->created_at)->locale('id')->diffForHumans() }}</p>
-                                <a href="/artikel/detail/{{ $item->slug }}"
-                                    class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
-                            </div>
+                        <div class="swiper-slide">
+                            <article class="cards">
+                                <div class="thumb"
+                                    style="background: url('http://localhost:8001/storage/{{ $item->gambar }}') no-repeat center;">
+                                </div>
+                                <div class="infos">
+                                    <h2 class="title">{{ $item->judul }}</h2>
+                                    <h3 class="date">
+                                        {{ \Carbon\Carbon::parse($item->created_at)->locale('id')->diffForHumans() }}</h3>
+                                    <p class="txt">
+                                        {{ substr($item->meta_deskripsi, 0, 189) }}{{ strlen($item->meta_deskripsi) > 189 ? '...' : '' }}
+                                    </p>
+                                    <a href="/artikel/detail/{{ $item->slug }}" class="details cards-link">event
+                                        details</a>
+                                </div>
+                            </article>
                         </div>
                     @endforeach
                 </div>

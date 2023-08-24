@@ -14,12 +14,12 @@
     <!-- Artikel Populer -->
     <section id="layanan" class="jumbotron bg-secondary">
         <div class="container pb-5">
-            <div class=" text-left py-5">
+            <div class=" text-left py-5" data-aos="fade-right">
                 <h1 class="fw-bold">LAYANAN</h1>
                 <h3 class="text-main fw-semibold text-kontak">DPC PERSAGI KARAWANG</h3>
                 <p class="text-kontak"">Berikut 3 Layanan utama yang kami sediakan untuk anda</p>
             </div>
-            <div class="card mb-3" style="max-width: 100%;">
+            <div class="card mb-3" style="max-width: 100%;" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-in">
                 <div class="row g-0">
                     <div class="col-md-3">
                         <lottie-player src="https://lottie.host/f74a3e49-2b73-49ca-9a4e-045721bd37fb/Up1U9xfEYZ.json"
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 100%;">
+            <div class="card mb-3" style="max-width: 100%;" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-in">
                 <div class="row g-0">
                     <div class="col-md-3">
                         <lottie-player src="https://lottie.host/ec8387c7-9cc8-40f2-a609-2fb1f7bd70f7/oXUG2XSH9J.json"
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 100%;">
+            <div class="card mb-3" style="max-width: 100%;" data-aos-delay="400" data-aos-duration="1000" data-aos="fade-in">
                 <div class="row g-0">
                     <div class="col-md-3">
                         <lottie-player src="https://lottie.host/7720c2ff-dad3-4202-b2aa-3c76427fdad4/S89oGx1Sjk.json"

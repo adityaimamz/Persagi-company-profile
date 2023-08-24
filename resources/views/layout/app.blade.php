@@ -17,6 +17,7 @@
     <!-- My Style -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Logo Title Bar -->
     <link rel="icon" href="Assets/png/logo-persagi.png" type="image/x-icon">
 
@@ -194,6 +195,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 500,
+        once: true,
+      });
+    </script>
 
     <!-- Initialize Swiper -->
     <script src="{{ asset('assets/js/app.js') }}"></script>

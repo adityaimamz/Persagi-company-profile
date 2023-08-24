@@ -36,12 +36,15 @@ var mySwiper = new Swiper(".mySwiper2", {
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 30,
+    grid: {
+        rows: 1,
+      },
     breakpoints: {
-        576: {
+        769: {
             slidesPerView: 2,
         },
-        990: {
+        1200: {
             slidesPerView: 3,
         },
 

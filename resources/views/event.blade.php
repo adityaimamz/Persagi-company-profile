@@ -18,9 +18,9 @@
                     Event <span class="text-title">Terbaru</span>
                 </h1>
             </div>
-            <div class="d-flex flex-wrap gap-3">
+            <div class="d-flex flex-wrap gap-2">
                 @foreach ($events as $item)
-                    <div class="card card-event">
+                    <div class="card card-event" data-aos="fade-up">
                         <img src="http://localhost:8001/storage/{{ $item->gambar }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-start text-title">{{ $item->judul }}</h5>

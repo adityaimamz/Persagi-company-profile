@@ -17,7 +17,7 @@
         <div class="container-fluid">
             <div class="container justify-content-center d-flex align-items-center mt-5">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade-right">
                         <h1 class="fw-bold pt-5">Kontak Kami</h1>
                         <h3 class="text-main fw-semibold text-kontak">DPC PERSAGI KARAWANG</h3>
                         <p class="text-kontak"">Anda perlu bantuan? Berikut ini alamat yang bisa anda kunjungi serta kontak
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade-left" data-aos-delay="500">
                         <h2 class="pt-5">Tidak Menemukan Informasi Yang Anda Cari?</h2>
                         <p class="pt-3">Lengkapi form berikut ini untuk mendapatkan bantuan dari kami!</p>
                         @if (Session::has('success'))
@@ -97,7 +97,7 @@
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-9">
                                     <button id="btnSubmit" type="submit"
-                                        class="btn btn-danger btn-primary">Kirim</button>
+                                        class="btn btn-primary">Kirim</button>
                                 </div>
                             </div>
                         </form>

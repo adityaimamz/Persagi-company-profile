@@ -60,10 +60,10 @@
                                     <label for="jenisKelamin" class="col-md-4 col-lg-3 col-form-label">Jenis
                                         Kelamin</label>
                                     <div class="col-md-8 col-lg-9 gap-3 pt-2 gap-2">
-                                        <input type="radio" name="jenisKelamin" id="lakiLaki" value="laki-laki">
+                                        <input type="radio" name="jenisKelamin" id="lakiLaki" value="laki-laki" required="tidak boleh kosong">
                                         <label for="lakiLaki">Laki-Laki</label>
 
-                                        <input type="radio" class="" name="jenisKelamin" id="perempuan"
+                                        <input type="radio" class="" name="jenisKelamin" id="perempuan" required="tidak boleh kosong"
                                             value="perempuan">
                                         <label for="perempuan">Perempuan</label>
                                     </div>
@@ -73,7 +73,7 @@
                                     <label for="beratBadan" class="col-md-4 col-lg-3 col-form-label">
                                         Berat Badan (kg)</label>
                                     <div class="col-md-8 col-lg-9">
-                                        <input name="beratBadan" type="number" class="form-control" id="beratBadan">
+                                        <input name="beratBadan" type="number" class="form-control" id="beratBadan" required="tidak boleh kosong">
                                     </div>
                                 </div>
 
@@ -81,7 +81,7 @@
                                     <label for="tinggiBadan" class="col-md-4 col-lg-3 col-form-label">
                                         Tinggi Badan (cm)</label>
                                     <div class="col-md-8 col-lg-9">
-                                        <input name="tinggiBadan" type="number" class="form-control" id="tinggiBadan">
+                                        <input name="tinggiBadan" type="number" class="form-control" id="tinggiBadan" required="tidak boleh kosong">
                                     </div>
                                 </div>
                                 <div class="text-center mb-3">
