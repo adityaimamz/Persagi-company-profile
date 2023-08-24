@@ -59,7 +59,7 @@
                         <div class="swiper-slide">
                             <article class="cards">
                                 <div class="thumb"
-                                    style="background: url('http://localhost:8001/storage/{{ $item->gambar }}') no-repeat center;">
+                                    style="background: url('http://localhost:50000/storage/{{ $item->gambar }}') no-repeat center;">
                                 </div>
                                 <div class="infos">
                                     <h2 class="title">{{ $item->judul }}</h2>

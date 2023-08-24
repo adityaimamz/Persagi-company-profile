@@ -43,8 +43,13 @@
                             <div class="card">
                                 <div class="card-header text-center bg-main">Overview</div>
                                 <div class="card-body text-center">
-                                    <img class="rounded-circle pt-2" style="width:150px"
+                                    @if ($data == null)
+                                    <img class="rounded-circle pt-2" style="width:100px"
                                         src="{{ asset('assets/png/defaultpp.jpeg') }}">
+                                    @else
+                                        <img class="rounded-circle pt-2" style="width:100px"
+                                            src="{{ Storage::url($data->gambar) }}">
+                                    @endif
                                     <div class="text-start pt-3 bio">
                                         <div class="row">
                                             <div class="col-md-5">
