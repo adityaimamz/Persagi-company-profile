@@ -50,7 +50,7 @@
 
     <section class="bg-white pb-3" style="height: 650px">
         <div class="container container-artikel">
-            <h2 class="text-center Artikel py-3 fw-bold">Artikel
+            <h2 class="text-center Artikel py-4 fw-bold">Artikel
             </h2>
             <div class="swiper mySwiper pb-5">
                 <div class="swiper-wrapper" data-aos-delay="200" data-aos="fade-up">

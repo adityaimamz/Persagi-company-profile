@@ -137,11 +137,11 @@
                             egestas magna feugiat sit vel. Cras vel ut diam facilisi feugiat eu. Et ultrices quis fames
                             nisi convallis. Tincidunt dictum fermentum tempor pellentesque arcu faucibus at.</p>
                         <div class="d-flex gap-2">
-                            <p><img src="Assets/png/Vector (3).png" width="18px" alt=""></p>
+                            <a href="https://web.facebook.com/people/DPC-Persagi-Karawang/100069871958547/" target="_blank"><img src="Assets/png/Vector (3).png" width="18px" alt=""></a>
                             <p class="txt-foot">Facebook</p>
                         </div>
                         <div class="d-flex gap-2">
-                            <p><img src="Assets/png/Vector (4).png" width="18px" alt=""></p>
+                            <a href="https://www.instagram.com/persagikarawang/" target="_blank"><img src="Assets/png/Vector (4).png" width="18px" alt=""></a>
                             <p class="txt-foot">Instagram</p>
                         </div>
                     </div>
