@@ -26,7 +26,7 @@
                             <div class="d-flex gap-1">
                                 <p><img src="{{ asset('assets/png/fluent_location-16-filled.png') }}" width="18px"
                                         alt=""></p>
-                                <p class="txt-foot"> Online (Zoom Meeting)
+                                <p class="txt-foot"> {{ $event->vanue }}
                                 </p>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                         <div class="card swiper-slide d-flex gap-3 card-lg">
                             <div class="row">
                                 <div class="col-4">
-                                    <img src="http://localhost:8001/storage/{{ $event->gambar }}" class=""
+                                    <img src="http://localhost:8000/storage/{{ $event->gambar }}" class=""
                                         alt="...">
                                 </div>
                                 <div class="col">

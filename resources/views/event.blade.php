@@ -21,7 +21,7 @@
             <div class="d-flex flex-wrap gap-2">
                 @foreach ($events as $item)
                     <div class="card card-event" data-aos="fade-up">
-                        <img src="http://localhost:8001/storage/{{ $item->gambar }}" class="card-img-top" alt="...">
+                        <img src="http://localhost:8000/storage/{{ $item->gambar }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-start text-title">{{ $item->judul }}</h5>
                             <div class="d-flex gap-2">
@@ -35,7 +35,7 @@
                             </div>
                             <div class="d-flex gap-1">
                                 <p><img src="Assets/png/fluent_location-16-filled.png" width="18px" alt=""></p>
-                                <p class="txt-foot"> Online (Zoom Meeting)
+                                <p class="txt-foot"> {{ $item->vanue }}
                                 </p>
                             </div>
                             <a href="/event/detail/{{ $item->slug }}" class="btn btn-light text-main border-main long">Baca Selengkapnya</a>
