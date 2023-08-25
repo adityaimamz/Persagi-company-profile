@@ -73,7 +73,7 @@
                                     <div class="mb-3">
                                         <label for="exampleInputPassword1" class="form-label">Konfirmasi Kata
                                             Sandi</label>
-                                        <input type="re-password" class="form-control" id="re-password" name="retype_password" required>
+                                        <input type="password" class="form-control" id="re-password" name="retype_password" required>
                                         <div class="errors text-danger" style="font-size: 14px">{{ $errors->register->first('retype_password') }}</div>
                                     </div>
 

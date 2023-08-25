@@ -42,10 +42,10 @@
                             </div>
                             <h5 class="text-main">Ikuti Kami</h5>
                             <div class="d-flex gap-2">
-                                <a href=""><img src="Assets/png/mdi_instagram.png" class="icon" alt=""></a>
-                                <p class="pe-4">Facebook</p>
-                                <a href=""><img src="Assets/png/mdi_fb.png" class="icon" alt=""></a>
-                                <p class="text-kontak">Instagram</p>
+                                <a href="https://www.instagram.com/persagikarawang/" target="_blank"><img src="Assets/png/mdi_instagram.png" class="icon" alt=""></a>
+                                <p class="pe-4">Instagram</p>
+                                <a href="https://web.facebook.com/people/DPC-Persagi-Karawang/100069871958547/" target="_blank"><img src="Assets/png/mdi_fb.png" class="icon" alt=""></a>
+                                <p class="text-kontak">Facebook</p>
                             </div>
                         </div>
                     </div>

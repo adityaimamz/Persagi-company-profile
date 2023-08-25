@@ -33,8 +33,17 @@
                 {{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMMM YYYY, HH:mm [WIB]') }}</p>
             @if (Auth::user())
                 <a href="" data-bs-toggle="dropdown" class="text-white">
+                    @php
+                        $user = \App\Models\BiodataUser::where('user_id', Auth::user()->id)->first();
+                    @endphp
+                    @if ($user == null)
                     <img src="{{ asset('Assets/png/defaultpp.jpeg') }}" alt="" width="25px"
-                        class="rounded-circle "><span class="mx-2">{{ Auth::user()->username }}</span><img
+                        class="rounded-circle ">
+                    @else
+                    <img src="{{ Storage::url($user->gambar) }}" alt="" width="25px"
+                        class="rounded-circle ">
+                    @endif
+                    <span class="mx-2">{{ Auth::user()->username }}</span><img
                         src="{{ asset('assets/png/arrow.png') }}" alt="">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">

@@ -16,7 +16,7 @@
                             merencanakan pola makan yang sesuai dengan gaya hidup dan preferensi Anda. Dengan dukungan ahli
                             gizi, Anda dapat mengambil langkah-langkah konkret untuk mencapai keseimbangan gizi dan
                             kesejahteraan yang optimal.</p>
-                        <a href="#imt" class="btn btn-imt text-white border-main mt-1">Konsultasi Sekarang</a>
+                        <a href="#konsultasi" class="btn btn-imt text-white border-main mt-1">Konsultasi Sekarang</a>
                     </div>
                     <div class="col-md-4">
                         <lottie-player src="https://lottie.host/ec8387c7-9cc8-40f2-a609-2fb1f7bd70f7/oXUG2XSH9J.json"
@@ -30,12 +30,12 @@
 
     <section id="konsultasi">
         <div class="container py-5 text-center">
-            <h1 class="fw-semibold">3 Langkah Mudah </h1>
-            <h2 class="text-main fw-semibold">Konsultasi gizi di PDC Persagi Karawang</h2>
+            <h1 class="fw-semibold" data-aos=fade-up>3 Langkah Mudah </h1>
+            <h2 class="text-main fw-semibold" data-aos="fade-up" data-aos-delay="500">Konsultasi gizi di PDC Persagi Karawang</h2>
             <div class="container">
                 <div class="grid text-center d-flex flex-wrap justify-content-center gap-3 pt-5">
-                    <div class="card g-col-6 g-col-md-4" style="width: 21rem;">
-                        <div class="card-header bg-main">
+                    <div class="card g-col-6 g-col-md-4" style="width: 21rem;" data-aos="fade-right" data-aos-delay="1000">
+                        <div class="card-header bg-main" >
                             Langkah 1
                         </div>
                         <div class="card-body">
@@ -45,7 +45,7 @@
                                 rasakan</p>
                         </div>
                     </div>
-                    <div class="card g-col-6 g-col-md-4" style="width: 21rem;">
+                    <div class="card g-col-6 g-col-md-4" style="width: 21rem;" data-aos="fade-right" data-aos-delay="1500">
                         <div class="card-header bg-main">
                             Langkah 2
                         </div>
@@ -57,7 +57,7 @@
                                 whatsapp.</p>
                         </div>
                     </div>
-                    <div class="card g-col-6 g-col-md-4" style="width: 21rem;">
+                    <div class="card g-col-6 g-col-md-4" style="width: 21rem;"data-aos="fade-right" data-aos-delay="2000" >
                         <div class="card-header bg-main">
                             Langkah 3
                         </div>

@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 100%;" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-in">
+            <div class="card mb-3" style="max-width: 100%;" data-aos-duration="1000" data-aos="fade-in">
                 <div class="row g-0">
                     <div class="col-md-3">
                         <lottie-player src="https://lottie.host/ec8387c7-9cc8-40f2-a609-2fb1f7bd70f7/oXUG2XSH9J.json"

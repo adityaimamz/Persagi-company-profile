@@ -22,7 +22,7 @@
             <div class="d-flex flex-wrap gap-3">
                 @foreach ($artikels as $item)
                     <div class="card card-artikel" data-aos="fade-up">
-                        <img src="http://localhost:8001/storage/{{ $item->gambar }}" class="card-img-top" alt="...">
+                        <img src="http://localhost:50000/storage/{{ $item->gambar }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-start text-title">{{ $item->judul }}</h5>
                             <div class="d-flex gap-2">

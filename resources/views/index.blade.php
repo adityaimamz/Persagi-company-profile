@@ -50,7 +50,7 @@
 
     <section class="bg-white pb-3" style="height: 650px">
         <div class="container container-artikel">
-            <h2 class="text-center Artikel py-3 fw-bold">Artikel
+            <h2 class="text-center Artikel py-4 fw-bold">Artikel
             </h2>
             <div class="swiper mySwiper pb-5">
                 <div class="swiper-wrapper" data-aos-delay="200" data-aos="fade-up">
@@ -90,8 +90,7 @@
                         <div class="card swiper-slide d-flex gap-3 card-lg">
                             <div class="row">
                                 <div class="col-4">
-                                    <img src="http://127.0.0.1:8001/storage/{{ $event->gambar }}" class=""
-                                        alt="...">
+                                    <img src="http://127.0.0.1:8001/storage/{{ $event->gambar }}" class="" alt="...">
                                 </div>
                                 <div class="col">
                                     <div class="pt-3 ">
@@ -109,7 +108,7 @@
                                         <div class="d-flex gap-1">
                                             <p><img src="Assets/png/fluent_location-16-filled.png" width="18px"
                                                     alt=""></p>
-                                            <p class="txt-foot"> Online (Zoom Meeting)
+                                            <p class="txt-foot"> {{ $event->vanue }}
                                             </p>
                                         </div>
                                         <a href="/event/detail/{{$event->slug}}" class="btn btn-light text-main border-main mb-3 me-auto ">Baca
