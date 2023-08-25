@@ -128,27 +128,27 @@
                             egestas magna feugiat sit vel. Cras vel ut diam facilisi feugiat eu. Et ultrices quis fames
                             nisi convallis. Tincidunt dictum fermentum tempor pellentesque arcu faucibus at.</p>
                         <div class="d-flex gap-2">
-                            <p><img src="Assets/png/Vector (3).png" width="18px" alt=""></p>
+                            <p><img src="{{asset('Assets/png/Vector (3).png')}}" width="18px" alt=""></p>
                             <p class="txt-foot">Facebook</p>
                         </div>
                         <div class="d-flex gap-2">
-                            <p><img src="Assets/png/Vector (4).png" width="18px" alt=""></p>
+                            <p><img src="{{asset('Assets/png/ig.png')}}" width="18px" alt=""></p>
                             <p class="txt-foot">Instagram</p>
                         </div>
                     </div>
                     <div class="col-md-4 mt-4 mt-md-0">
                         <p class="btn-art">Kontak</p>
                         <div class="d-flex gap-3">
-                            <p><img src="Assets/png/Vector (1).png" alt="" width="18px"></p>
+                            <p><img src="{{asset('Assets/png/Vector (1).png')}}" alt="" width="18px"></p>
                             <p>Jalan Parahiyangan No.39, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311
                             </p>
                         </div>
                         <div class="d-flex gap-3">
-                            <p><img src="Assets/png/Vector (2).png" alt="" width="18px"></p>
+                            <p><img src="{{asset('Assets/png/Vector (2).png')}}" alt="" width="18px"></p>
                             <p>dpcpersagi3215@gmail.com</p>
                         </div>
                         <div class="d-flex gap-3">
-                            <p><img src="Assets/png/material-symbols_call.png" alt="" width="18px"></p>
+                            <p><img src="{{asset('Assets/png/material-symbols_call.png')}}" alt="" width="18px"></p>
                             <p>+62852 2620 3601</p>
                         </div>
                     </div>

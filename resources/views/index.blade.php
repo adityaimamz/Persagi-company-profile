@@ -59,7 +59,7 @@
                         <div class="swiper-slide">
                             <article class="cards">
                                 <div class="thumb"
-                                    style="background: url('http://localhost:8001/storage/{{ $item->gambar }}') no-repeat center;">
+                                    style="background: url('http://127.0.0.1:8000/storage/{{ $item->gambar }}') no-repeat center;">
                                 </div>
                                 <div class="infos">
                                     <h2 class="title">{{ $item->judul }}</h2>
@@ -90,7 +90,7 @@
                         <div class="card swiper-slide d-flex gap-3 card-lg">
                             <div class="row">
                                 <div class="col-4">
-                                    <img src="http://localhost:8001/storage/{{ $event->gambar }}" class=""
+                                    <img src="http://127.0.0.1:8001/storage/{{ $event->gambar }}" class=""
                                         alt="...">
                                 </div>
                                 <div class="col">
@@ -112,7 +112,7 @@
                                             <p class="txt-foot"> Online (Zoom Meeting)
                                             </p>
                                         </div>
-                                        <a href="" class="btn btn-light text-main border-main mb-3 me-auto ">Baca
+                                        <a href="/event/detail/{{$event->slug}}" class="btn btn-light text-main border-main mb-3 me-auto ">Baca
                                             Selengkapnya</a>
                                     </div>
                                 </div>

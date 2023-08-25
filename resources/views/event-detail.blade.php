@@ -14,7 +14,7 @@
                         <div class="pt-3 ">
                             <h5 class="text-start text-title">{{ $event->judul }}</h5>
                             <div class="d-flex gap-2">
-                                <p><img src="{{ asset('assets/png/clarity_date-solid.png') }}" width="18px"
+                                <p><img src="{{ asset('assets/png/Calender.png') }}" width="18px"
                                         alt=""></p>
                                 <p class="txt-foot">{{ $event->tanggal }}</p>
                             </div>
@@ -76,7 +76,7 @@
                                     <div class="pt-3 ">
                                         <h5 class="text-start text-title">{{ $event->judul }}</h5>
                                         <div class="d-flex gap-2">
-                                            <p><img src="{{ asset('assets/png/clarity_date-solid.png') }}" width="18px"
+                                            <p><img src="{{ asset('assets/png/Calender.png') }}" width="18px"
                                                     alt=""></p>
                                             <p class="txt-foot">{{ $event->tanggal }}</p>
                                         </div>
@@ -92,7 +92,7 @@
                                             <p class="txt-foot"> Online (Zoom Meeting)
                                             </p>
                                         </div>
-                                        <a href="" class="btn btn-light text-main border-main mb-3 me-auto ">Baca
+                                        <a href="/event/detail/{{$event->slug}}" class="btn btn-light text-main border-main mb-3 me-auto ">Baca
                                             Selengkapnya</a>
                                     </div>
                                 </div>
