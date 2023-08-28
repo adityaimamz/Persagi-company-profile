@@ -92,10 +92,9 @@
                         </div>
                         <div class="tab-pane fade " id="pills-balita" role="tabpanel" aria-labelledby="balita-tab">
                             <div class="container" style="max-width: 700px">
-                                <img src="{{ asset('assets/png/maintance.png') }}" alt="">
-                                {{-- <h4 class="text-center">Masukan Data</h4> --}}
-                                {{-- <form action="{{ route('login.change') }}" method="POST">
-                                    @method('PUT')
+                                {{-- <img src="{{ asset('assets/png/maintance.png') }}" alt=""> --}}
+                                <h4 class="text-center">Masukan Data</h4>
+                                <form id="BMIBalita">
                                     @csrf
                                     <div class="row mb-3">
                                         <label for="jenisKelamin" class="col-md-4 col-lg-3 col-form-label">Jenis Kelamin</label>
@@ -132,7 +131,7 @@
                                             Usia Diukur (Bulan)</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="usiaDiukur" type="number" class="form-control" id="usiaDiukur"
-                                                disabled>
+                                                >
                                         </div>
                                     </div>
 
@@ -140,7 +139,7 @@
                                         <label for="beratBadan" class="col-md-4 col-lg-3 col-form-label">
                                             Berat Badan (kg)</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <input name="beratBadan" type="number" class="form-control"
+                                            <input name="beratBadan" type="text" class="form-control"
                                                 id="beratBadan">
                                         </div>
                                     </div>
@@ -156,7 +155,7 @@
                                     <div class="text-center mb-3">
                                         <button type="submit" class="btn btn-primary w-full">Hitung IMT</button>
                                     </div>
-                                </form> --}}
+                                </form>
                             </div>
                         </div>
                     </div><!-- End Pills Tabs -->
@@ -165,7 +164,7 @@
 
             <div class="card mt-4 card-imt">
                 <div class="card-body">
-                    <h4 class="text-center">Hasil perhitungan</h4>
+                    <h1 class="text-center">Hasil perhitungan</h1>
                     <div id="hasil" style="max-width: 750px text-center">
 
                     </div>
@@ -178,7 +177,7 @@
 @section('js')
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    {{-- <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             var tanggalLahirInput = document.getElementById("tanggalLahir");
             var tanggalDiukurInput = document.getElementById("tanggalDiukur");
@@ -197,7 +196,7 @@
                 usiaDiukurInput.value = diffInMonths;
             }
         });
-    </script> --}}
+    </script>
     <script>
         $("#hitungBMI").on("click", function() {
             let perhitungan = $("#beratBadan").val() / (($("#tinggiBadan").val() / 100) ** 2);
@@ -234,6 +233,65 @@
                     <a href="/konsultasi"><button id="btnSubmit" style="width:250px" type="submit" class="btn btn-primary">Konsultasikan Gizimu</button></a>
                 </div>            `)
             }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#BMIBalita").submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                type: 'POST',
+                url: '{{ route('dataset') }}',
+                dataType: "JSON",
+                data: $(this).serialize(),
+                beforeSend: function() {
+                },
+                success: function(data) {
+                    $("#hasil").html(`
+                    <div class="mb-3">
+                        <p class="text-center fs-4">Berdasarkan Index Masa Tubuh(IMT) : <span class="text-main">${data.data.imt.Nilai}</span>  </p>
+                        <p class="text-center">Berdasarkan perhitungan diatas, balita anda tergolong ${data.data.imt.Pesan}. </p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-center fs-4">Berdasarkan Berat Badan(BB) menurut Umur : <span class="text-main">${data.data.wfa.Nilai}</span>  </p>
+                        <p class="text-center">Berdasarkan perhitungan diatas, balita anda tergolong ${data.data.wfa.Pesan}. </p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-center fs-4">Berdasarkan Tinggi/Panjang Badan(BB/PB) menurut Umur : <span class="text-main">${data.data.lhfa.Nilai}</span>  </p>
+                        <p class="text-center">Berdasarkan perhitungan diatas, balita anda tergolong ${data.data.lhfa.Pesan}. </p>
+                    </div>
+                    `);
+
+                    if(data.data.wfl) {
+                        $("#hasil").append(`
+                        <div class="mb-3 ${(data.data.wfl) ? "" : "d-none"}">
+                            <p class="text-center fs-4">Berdasarkan Berat Badan(BB) Menurut Panjang Badan(PB) : <span class="text-main">${data.data.wfl.Nilai}</span>  </p>
+                            <p class="text-center">Berdasarkan perhitungan diatas, balita anda tergolong ${data.data.wfl.Pesan}. </p>
+                            <div class="text-center mb-3">
+                                <a href="/konsultasi"><button id="btnSubmit" style="width:250px" type="submit" class="btn btn-primary">Konsultasikan Gizi Balitamu</button></a>
+                            </div>
+                        </div>
+                        `)
+                    }
+
+                    if(data.data.wfh) {
+                        $("#hasil").append(`
+                            <div class="mb-3 ${(data.data.wfh) ? "" : "d-none"}">
+                                <p class="text-center fs-4">Berdasarkan Berat Badan(BB) Menurut Tinggi Badan(TB) : <span class="text-main">${data.data.wfh.Nilai}</span>  </p>
+                                <p class="text-center">Berdasarkan perhitungan diatas, balita anda tergolong ${data.data.wfh.Pesan}. </p>
+                                <div class="text-center mb-3">
+                                    <a href="/konsultasi"><button id="btnSubmit" style="width:250px" type="submit" class="btn btn-primary">Konsultasikan Gizi Balitamu</button></a>
+                                </div>
+                            </div>
+                        `)
+                    }
+                },
+                complete: function(data) {
+                },
+                error: function() {
+                }
+                });
+            });
         });
     </script>
 @endsection
