@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 100%;" data-aos-delay="400" data-aos-duration="1000" data-aos="fade-in">
+            <div class="card mb-3" style="max-width: 100%;" data-aos-duration="1000" data-aos="fade-in">
                 <div class="row g-0">
                     <div class="col-md-3">
                         <lottie-player src="https://lottie.host/7720c2ff-dad3-4202-b2aa-3c76427fdad4/S89oGx1Sjk.json"
